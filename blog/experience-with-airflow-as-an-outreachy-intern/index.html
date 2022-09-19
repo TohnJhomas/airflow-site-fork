@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -33,24 +33,16 @@
 <meta property="og:description" content="Outreachy is a program which organises three months paid internships with FOSS projects for people who are typically underrepresented in those projects.
 Contribution Period The first thing I had to do was choose a project under an organisation. After going through all the projects I chose “Extending the REST API of Apache Airflow”, because I had a good idea of what REST API(s) are, so I thought it would be easier to get started with the contributions." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/experience-with-airflow-as-an-outreachy-intern/" />
-
-<meta property="og:image" content="/images/feature-image.png" />
+<meta property="og:url" content="/blog/experience-with-airflow-as-an-outreachy-intern/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-08-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Journey with Airflow as an Outreachy Intern">
 <meta itemprop="description" content="Outreachy is a program which organises three months paid internships with FOSS projects for people who are typically underrepresented in those projects.
-Contribution Period The first thing I had to do was choose a project under an organisation. After going through all the projects I chose “Extending the REST API of Apache Airflow”, because I had a good idea of what REST API(s) are, so I thought it would be easier to get started with the contributions.">
-
-
-<meta itemprop="datePublished" content="2020-08-30T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="532">
-
-
-
-<meta itemprop="keywords" content="Community," />
-<meta name="twitter:card" content="summary_large_image"/>
+Contribution Period The first thing I had to do was choose a project under an organisation. After going through all the projects I chose “Extending the REST API of Apache Airflow”, because I had a good idea of what REST API(s) are, so I thought it would be easier to get started with the contributions."><meta itemprop="datePublished" content="2020-08-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="528"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="Community," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Journey with Airflow as an Outreachy Intern"/>
@@ -63,8 +55,8 @@ Contribution Period The first thing I had to do was choose a project under an or
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -77,8 +69,8 @@ Contribution Period The first thing I had to do was choose a project under an or
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -100,10 +92,10 @@ Contribution Period The first thing I had to do was choose a project under an or
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -483,57 +475,53 @@ Contribution Period The first thing I had to do was choose a project under an or
     <p class="blogpost-content__metadata--description"></p>
 </div>
 <div class="markdown-content">
-    
-
-<p><a href="https://www.outreachy.org/" target="_blank">Outreachy</a> is a program which organises three months paid internships with FOSS
+    <p><a href="https://www.outreachy.org/">Outreachy</a> is a program which organises three months paid internships with FOSS
 projects for people who are typically underrepresented in those projects.</p>
-
 <h3 id="contribution-period">Contribution Period</h3>
-
 <p>The first thing I had to do was choose a project under an organisation. After going through all the projects
 I chose “Extending the REST API of Apache Airflow”, because I had a good idea of what  REST API(s) are, so I
 thought it would be easier to get started with the contributions. The next step was to set up Airflow’s dev
-environment which thanks to <a href="https://github.com/apache/airflow/blob/master/BREEZE.rst" target="_blank">Breeze</a>, was a breeze.
+environment which thanks to <a href="https://github.com/apache/airflow/blob/master/BREEZE.rst">Breeze</a>, was a breeze.
 Since I had never contributed to FOSS before so this part was overwhelming but there were plenty of issues
 labelled “good first issues” with detailed descriptions and some even had code snippets so luckily that nudged
 me in the right direction. These things about Airflow and the positive vibes from the community were the reasons
 why I chose to stick with Airflow as my Outreachy project.</p>
-
 <h3 id="internship-period">Internship Period</h3>
-
 <p>My first PR was followed by many new experiences one of them being that I introduced a
-<a href="https://github.com/apache/airflow/pull/7680#issuecomment-619763051" target="_blank">bug</a> in it;).
+<a href="https://github.com/apache/airflow/pull/7680#issuecomment-619763051">bug</a> in it;).
 But nonetheless it made me familiar with the feedback loop and the feedback on my subsequent
-<a href="https://github.com/apache/airflow/pulls?q=is%3Apr+author%3AOmairK+" target="_blank">PRs</a> was the focal point of the overall
+<a href="https://github.com/apache/airflow/pulls?q=is%3Apr+author%3AOmairK+">PRs</a> was the focal point of the overall
 learning experience I went through, which boosted my confidence to contribute more and move out of my comfort zone.
 I wanted to learn more about the things that happen under the Airflow’s hood so I started filtering out recent PRs
 dealing with different components and I would go through the code changes along with discussion that would help me
-get a better understanding of the whole workflow. <a href="https://lists.apache.org/list.html?dev@airflow.apache.org" target="_blank">Airflow’s mailing list</a>
+get a better understanding of the whole workflow. <a href="https://lists.apache.org/list.html?dev@airflow.apache.org">Airflow’s mailing list</a>
 was also a great source of knowledge.</p>
-
 <p>The API related PRs that I worked on helped me with some of the important concepts like:</p>
-
-<p>1) <a href="https://github.com/apache/airflow/pull/9329" target="_blank">Pool CRUD endpoints</a> where pools limit the execution parallelism.</p>
-
-<p>2) <a href="https://github.com/apache/airflow/pull/9597" target="_blank">Tasks</a> determine the actual work that has to be carried out.</p>
-
-<p>3) <a href="https://github.com/apache/airflow/pull/9473" target="_blank">DAG</a> which represents the structure for a collection
-  of tasks. It keeps track of tasks, their dependencies and the sequence in which they have to run.</p>
-
-<p>4) <a href="https://github.com/apache/airflow/pull/9473" target="_blank">Dag Runs</a> that are the instantiation of DAG(s) in time.</p>
-
+<ol>
+<li>
+<p><a href="https://github.com/apache/airflow/pull/9329">Pool CRUD endpoints</a> where pools limit the execution parallelism.</p>
+</li>
+<li>
+<p><a href="https://github.com/apache/airflow/pull/9597">Tasks</a> determine the actual work that has to be carried out.</p>
+</li>
+<li>
+<p><a href="https://github.com/apache/airflow/pull/9473">DAG</a> which represents the structure for a collection
+of tasks. It keeps track of tasks, their dependencies and the sequence in which they have to run.</p>
+</li>
+<li>
+<p><a href="https://github.com/apache/airflow/pull/9473">Dag Runs</a> that are the instantiation of DAG(s) in time.</p>
+</li>
+</ol>
 <p>Through actively and passively participating in discussions I learnt that even if there is a difference of opinion
-one could always learn from the different approaches, and <a href="https://github.com/apache/airflow/pull/8721" target="_blank">this PR</a> with
+one could always learn from the different approaches, and <a href="https://github.com/apache/airflow/pull/8721">this PR</a> with
 more than 300+ comments is the proof of it. I also started reviewing small PRs which gave me the amazing opportunity
 to interact with new people. Throughout my internship I learnt a lot about different frameworks and technologies
 but the biggest takeaway for me was that a code is read more often than it&rsquo;s written, and I started writing code with
 that in mind.</p>
-
 <h3 id="wrapping-up">Wrapping Up</h3>
-
 <p>So with my project of extending Airflow’s REST API as well as the Outreachy internship coming to an end I would like
-to thank my mentors <a href="https://github.com/potiuk" target="_blank">Jarek Potiuk</a>, <a href="https://github.com/kaxil" target="_blank">Kaxil Naik</a> and
-<a href="https://github.com/mik-laj" target="_blank">Kamil Breguła</a> for the patience and the time they invested in mentoring me and
+to thank my mentors <a href="https://github.com/potiuk">Jarek Potiuk</a>, <a href="https://github.com/kaxil">Kaxil Naik</a> and
+<a href="https://github.com/mik-laj">Kamil Breguła</a> for the patience and the time they invested in mentoring me and
 the Airflow community for making me feel so welcomed. I plan to stick around and contribute to give back to the
 community that has been made my summer, one to remember.</p>
 
@@ -867,13 +855,13 @@ community that has been made my summer, one to remember.</p>
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

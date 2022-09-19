@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -32,23 +32,15 @@
 <title>Apache Airflow 1.10.8 &amp; 1.10.9 | Apache Airflow</title><meta property="og:title" content="Apache Airflow 1.10.8 &amp; 1.10.9" />
 <meta property="og:description" content="We are happy to present the new 1.10.8 and 1.10.9 releases of Apache Airflow." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/airflow-1.10.8-1.10.9/" />
-
-<meta property="og:image" content="/images/feature-image.png" />
+<meta property="og:url" content="/blog/airflow-1.10.8-1.10.9/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-02-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Apache Airflow 1.10.8 &amp; 1.10.9">
-<meta itemprop="description" content="We are happy to present the new 1.10.8 and 1.10.9 releases of Apache Airflow.">
-
-
-<meta itemprop="datePublished" content="2020-02-23T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="437">
-
-
-
-<meta itemprop="keywords" content="release," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="description" content="We are happy to present the new 1.10.8 and 1.10.9 releases of Apache Airflow."><meta itemprop="datePublished" content="2020-02-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="437"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="release," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Apache Airflow 1.10.8 &amp; 1.10.9"/>
@@ -60,8 +52,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -74,8 +66,8 @@
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -97,10 +89,10 @@
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -495,74 +487,48 @@
     <p class="blogpost-content__metadata--description">We are happy to present the new 1.10.8 and 1.10.9 releases of Apache Airflow.</p>
 </div>
 <div class="markdown-content">
-    
-
-<p>Airflow 1.10.8 contains 160 commits since 1.10.7 and includes 4 new features, 42 improvements, 36 bug fixes, and several doc changes.</p>
-
+    <p>Airflow 1.10.8 contains 160 commits since 1.10.7 and includes 4 new features, 42 improvements, 36 bug fixes, and several doc changes.</p>
 <p>We released 1.10.9 on the same day as one of the Flask dependencies (Werkzeug) released 1.0 which broke Airflow 1.10.8.</p>
-
 <p><strong>Details</strong>:</p>
-
 <ul>
-<li><strong>PyPI</strong>: <a href="https://pypi.org/project/apache-airflow/1.10.9/" target="_blank">https://pypi.org/project/apache-airflow/1.10.9/</a></li>
-<li><strong>Docs</strong>: <a href="https://airflow.apache.org/docs/1.10.9/" target="_blank">https://airflow.apache.org/docs/1.10.9/</a></li>
-<li><strong>Changelog (1.10.8)</strong>: <a href="http://airflow.apache.org/docs/1.10.8/changelog.html#airflow-1-10-8-2020-01-07" target="_blank">http://airflow.apache.org/docs/1.10.8/changelog.html#airflow-1-10-8-2020-01-07</a></li>
-<li><strong>Changelog (1.10.9)</strong>: <a href="http://airflow.apache.org/docs/1.10.9/changelog.html#airflow-1-10-9-2020-02-10" target="_blank">http://airflow.apache.org/docs/1.10.9/changelog.html#airflow-1-10-9-2020-02-10</a></li>
+<li><strong>PyPI</strong>: <a href="https://pypi.org/project/apache-airflow/1.10.9/">https://pypi.org/project/apache-airflow/1.10.9/</a></li>
+<li><strong>Docs</strong>: <a href="https://airflow.apache.org/docs/1.10.9/">https://airflow.apache.org/docs/1.10.9/</a></li>
+<li><strong>Changelog (1.10.8)</strong>: <a href="http://airflow.apache.org/docs/1.10.8/changelog.html#airflow-1-10-8-2020-01-07">http://airflow.apache.org/docs/1.10.8/changelog.html#airflow-1-10-8-2020-01-07</a></li>
+<li><strong>Changelog (1.10.9)</strong>: <a href="http://airflow.apache.org/docs/1.10.9/changelog.html#airflow-1-10-9-2020-02-10">http://airflow.apache.org/docs/1.10.9/changelog.html#airflow-1-10-9-2020-02-10</a></li>
 </ul>
-
 <p>Some of the noteworthy new features (user-facing) are:</p>
-
 <ul>
-<li><a href="https://github.com/apache/airflow/pull/6489" target="_blank">Add tags to DAGs and use it for filtering in the UI (RBAC only)</a></li>
-<li><a href="http://airflow.apache.org/docs/1.10.9/executor/debug.html" target="_blank">New Executor: DebugExecutor for Local debugging from your IDE</a></li>
-<li><a href="https://github.com/apache/airflow/pull/7281" target="_blank">Allow passing conf in &ldquo;Add DAG Run&rdquo; (Triggered Dags) view</a></li>
-<li><a href="https://github.com/apache/airflow/pull/7038" target="_blank">Allow dags to run for future execution dates for manually triggered DAGs (only if <code>schedule_interval=None</code>)</a></li>
-<li><a href="https://airflow.apache.org/docs/1.10.9/configurations-ref.html" target="_blank">Dedicated page in documentation for all configs in airflow.cfg</a></li>
+<li><a href="https://github.com/apache/airflow/pull/6489">Add tags to DAGs and use it for filtering in the UI (RBAC only)</a></li>
+<li><a href="http://airflow.apache.org/docs/1.10.9/executor/debug.html">New Executor: DebugExecutor for Local debugging from your IDE</a></li>
+<li><a href="https://github.com/apache/airflow/pull/7281">Allow passing conf in &ldquo;Add DAG Run&rdquo; (Triggered Dags) view</a></li>
+<li><a href="https://github.com/apache/airflow/pull/7038">Allow dags to run for future execution dates for manually triggered DAGs (only if <code>schedule_interval=None</code>)</a></li>
+<li><a href="https://airflow.apache.org/docs/1.10.9/configurations-ref.html">Dedicated page in documentation for all configs in airflow.cfg</a></li>
 </ul>
-
 <h3 id="add-tags-to-dags-and-use-it-for-filtering-in-the-ui">Add tags to DAGs and use it for filtering in the UI</h3>
-
 <p>In order to filter DAGs (e.g by team), you can add tags in each dag. The filter is saved in a cookie and can be reset by the reset button.</p>
-
 <p>For example:</p>
-
 <p>In your Dag file, pass a list of tags you want to add to DAG object:</p>
-
-<pre><code class="language-python">dag = DAG(
-    dag_id='example_dag_tag',
-    schedule_interval='0 0 * * *',
-    tags=['example']
-)
-</code></pre>
-
-<p><strong>Screenshot</strong>:
-<img src="airflow-dag-tags.png" alt="Add filter by DAG tags" /></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">dag</span> <span class="o">=</span> <span class="n">DAG</span><span class="p">(</span>
+    <span class="n">dag_id</span><span class="o">=</span><span class="s1">&#39;example_dag_tag&#39;</span><span class="p">,</span>
+    <span class="n">schedule_interval</span><span class="o">=</span><span class="s1">&#39;0 0 * * *&#39;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;example&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div><p><strong>Screenshot</strong>:
+<img src="airflow-dag-tags.png" alt="Add filter by DAG tags"></p>
 <p><strong>Note</strong>: This feature is only available for the RBAC UI (enabled using <code>rbac=True</code> in <code>[webserver]</code> section in your <code>airflow.cfg</code>).</p>
-
-<h2 id="special-note-deprecations">Special Note / Deprecations</h2>
-
+<h2 id="special-note--deprecations">Special Note / Deprecations</h2>
 <h3 id="python-2">Python 2</h3>
-
 <p>Python 2 has reached end of its life on Jan 2020. Airflow Master no longer supports Python 2.
 Airflow 1.10.* would be the last series to support Python 2.</p>
-
 <p>We strongly recommend users to use Python &gt;= 3.6</p>
-
 <h3 id="use-airflow-rbac-ui">Use Airflow RBAC UI</h3>
-
 <p>Airflow 1.10.9 ships with 2 UIs, the default is non-RBAC Flask-admin based UI and Flask-appbuilder based UI.</p>
-
 <p>The Flask-AppBuilder (FAB) based UI is allows Role-based Access Control and has more advanced features compared to
 the legacy Flask-admin based UI. This UI can be enabled by setting <code>rbac=True</code> in <code>[webserver]</code> section in your <code>airflow.cfg</code>.</p>
-
 <p>Flask-admin based UI is deprecated and new features won&rsquo;t be ported to it. This UI will still be the default
 for 1.10.* series but would no longer be available from Airflow 2.0</p>
-
 <h2 id="list-of-contributors">List of Contributors</h2>
-
 <p>According to git shortlog, the following people contributed to the 1.10.8 and 1.10.9 release. Thank you to all contributors!</p>
-
 <p>Anita Fronczak, Ash Berlin-Taylor, BasPH, Bharat Kashyap, Bharath Palaksha, Bhavika Tekwani, Bjorn Olsen, Brian Phillips, Cooper Gillan, Daniel Cohen, Daniel Imberman, Daniel Standish, Gabriel Eckers, Hossein Torabi, Igor Khrol, Jacob, Jarek Potiuk, Jay, Jiajie Zhong, Jithin Sukumar, Kamil Breguła, Kaxil Naik, Kousuke Saruta, Mustafa Gök, Noël Bardelot, Oluwafemi Sule, Pete DeJoy, QP Hou, Qian Yu, Robin Edwards, Ry Walker, Steven van Rossum, Tomek Urbaszek, Xinbin Huang, Yuen-Kuei Hsueh, Yu Qian, Zacharya, ZxMYS, rconroy293, tooptoop4</p>
 
 </div>
@@ -891,13 +857,13 @@ for 1.10.* series but would no longer be available from Airflow 2.0</p>
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

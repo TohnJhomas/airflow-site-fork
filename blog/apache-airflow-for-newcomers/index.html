@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -33,24 +33,16 @@
 <meta property="og:description" content="Apache Airflow is a platform to programmatically author, schedule, and monitor workflows. A workflow is a sequence of tasks that processes a set of data. You can think of workflow as the path that describes how tasks go from being undone to done. Scheduling, on the other hand, is the process of planning, controlling, and optimizing when a particular task should be done.
 Authoring Workflow in Apache Airflow. Airflow makes it easy to author workflows using python scripts." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/apache-airflow-for-newcomers/" />
-
-<meta property="og:image" content="/images/feature-image.png" />
+<meta property="og:url" content="/blog/apache-airflow-for-newcomers/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-08-17T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Apache Airflow For Newcomers">
 <meta itemprop="description" content="Apache Airflow is a platform to programmatically author, schedule, and monitor workflows. A workflow is a sequence of tasks that processes a set of data. You can think of workflow as the path that describes how tasks go from being undone to done. Scheduling, on the other hand, is the process of planning, controlling, and optimizing when a particular task should be done.
-Authoring Workflow in Apache Airflow. Airflow makes it easy to author workflows using python scripts.">
-
-
-<meta itemprop="datePublished" content="2020-08-17T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="1070">
-
-
-
-<meta itemprop="keywords" content="Community," />
-<meta name="twitter:card" content="summary_large_image"/>
+Authoring Workflow in Apache Airflow. Airflow makes it easy to author workflows using python scripts."><meta itemprop="datePublished" content="2020-08-17T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="1070"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="Community," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Apache Airflow For Newcomers"/>
@@ -63,8 +55,8 @@ Authoring Workflow in Apache Airflow. Airflow makes it easy to author workflows 
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -77,8 +69,8 @@ Authoring Workflow in Apache Airflow. Airflow makes it easy to author workflows 
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -100,10 +92,10 @@ Authoring Workflow in Apache Airflow. Airflow makes it easy to author workflows 
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -485,78 +477,55 @@ Authoring Workflow in Apache Airflow. Airflow makes it easy to author workflows 
     <p class="blogpost-content__metadata--description"></p>
 </div>
 <div class="markdown-content">
-    
-
-<p>Apache Airflow is a platform to programmatically author, schedule, and monitor workflows.
+    <p>Apache Airflow is a platform to programmatically author, schedule, and monitor workflows.
 A workflow is a sequence of tasks that processes a set of data. You can think of workflow as the
 path that describes how tasks go from being undone to done. Scheduling, on the other hand, is the
 process of planning, controlling, and optimizing when a particular task should be done.</p>
-
 <h3 id="authoring-workflow-in-apache-airflow">Authoring Workflow in Apache Airflow.</h3>
-
-<p>Airflow makes it easy to author workflows using python scripts. A <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph" target="_blank">Directed Acyclic Graph</a>
+<p>Airflow makes it easy to author workflows using python scripts. A <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">Directed Acyclic Graph</a>
 (DAG) represents a workflow in Airflow. It is a collection of tasks in a way that shows each task&rsquo;s
 relationships and dependencies. You can have as many DAGs as you want, and Airflow will execute
 them according to the task&rsquo;s relationships and dependencies. If task B depends on the successful
 execution of another task A, it means Airflow will run task A and only run task B after task A.
 This dependency is very easy to express in Airflow. For example, the above scenario is expressed as</p>
-
-<pre><code class="language-python">task_A &gt;&gt; task_B
-</code></pre>
-
-<p>Also equivalent to</p>
-
-<pre><code class="language-python">task_A.set_downstream(task_B)
-</code></pre>
-
-<p><img src="Simple_dag.png" alt="Simple Dag" /></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">task_A</span> <span class="o">&gt;&gt;</span> <span class="n">task_B</span>
+</code></pre></div><p>Also equivalent to</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">task_A</span><span class="o">.</span><span class="n">set_downstream</span><span class="p">(</span><span class="n">task_B</span><span class="p">)</span>
+</code></pre></div><p><img src="Simple_dag.png" alt="Simple Dag"></p>
 <p>That helps Airflow to know that it needs to execute task A before task B. Tasks can have far more complex
 relationships to each other than expressed above and Airflow figures out how and when to execute the tasks following
 their relationships and dependencies.
-<img src="semicomplex.png" alt="Complex Dag" /></p>
-
+<img src="semicomplex.png" alt="Complex Dag"></p>
 <p>Before we discuss the architecture of Airflow that makes scheduling, executing, and monitoring of
-workflow an easy thing, let us discuss the <a href="https://github.com/apache/airflow/blob/master/BREEZE.rst" target="_blank">Breeze environment</a>.</p>
-
+workflow an easy thing, let us discuss the <a href="https://github.com/apache/airflow/blob/master/BREEZE.rst">Breeze environment</a>.</p>
 <h3 id="breeze-environment">Breeze Environment</h3>
-
 <p>The breeze environment is the development environment for Airflow where you can run tests, build images,
 build documentations and so many other things. There are excellent
-<a href="https://github.com/apache/airflow/blob/master/BREEZE.rst" target="_blank">documentation and video</a> on Breeze environment.
+<a href="https://github.com/apache/airflow/blob/master/BREEZE.rst">documentation and video</a> on Breeze environment.
 Please check them out. You enter the Breeze environment by running the <code>./breeze</code> script. You can run all
 the commands mentioned here in the Breeze environment.</p>
-
 <h3 id="scheduler">Scheduler</h3>
-
 <p>The scheduler is the component that monitors DAGs and triggers those tasks whose dependencies have
 been met. It watches over the DAG folder, checking the tasks in each DAG and triggers them once they
 are ready. It accomplishes this by spawning a process that runs periodically(every minute or so)
 reading the metadata database to check the status of each task and decides what needs to be done.
 The metadata database is where the status of all tasks are recorded. The status can be one of running,
- success, failed, etc.</p>
-
+success, failed, etc.</p>
 <p>A task is said to be ready when its dependencies have been met. The dependencies include all the data
 necessary for the task to be executed. It should be noted that the scheduler won&rsquo;t trigger your tasks until
 the period it covers has ended. If a task&rsquo;s <code>schedule_interval</code> is <code>@daily</code>, the scheduler triggers the task
 at the end of the day and not at the beginning. This is to ensure that the necessary data needed for the tasks
 are ready. It is also possible to trigger tasks manually on the UI.</p>
-
-<p>In the <a href="https://github.com/apache/airflow/blob/master/BREEZE.rst" target="_blank">Breeze environment</a>, the scheduler is started by running the command <code>airflow scheduler</code>. It uses
+<p>In the <a href="https://github.com/apache/airflow/blob/master/BREEZE.rst">Breeze environment</a>, the scheduler is started by running the command <code>airflow scheduler</code>. It uses
 the configured production environment. The configuration can be specified in <code>airflow.cfg</code></p>
-
 <h3 id="executor">Executor</h3>
-
 <p>Executors are responsible for running tasks. They work with the scheduler to get information about
 what resources are needed to run a task as the task is queued.</p>
-
-<p>By default, Airflow uses the <a href="https://airflow.apache.org/docs/stable/executor/sequential.html#sequential-executor" target="_blank">SequentialExecutor</a>.
- However, this executor is limited and it is the only executor that can be used with SQLite.</p>
-
-<p>There are many other <a href="https://airflow.apache.org/docs/stable/executor/index.html" target="_blank">executors</a>,
- the difference is on the resources they have and how they choose to use the resources. The available executors
- are:</p>
-
+<p>By default, Airflow uses the <a href="https://airflow.apache.org/docs/stable/executor/sequential.html#sequential-executor">SequentialExecutor</a>.
+However, this executor is limited and it is the only executor that can be used with SQLite.</p>
+<p>There are many other <a href="https://airflow.apache.org/docs/stable/executor/index.html">executors</a>,
+the difference is on the resources they have and how they choose to use the resources. The available executors
+are:</p>
 <ul>
 <li>Sequential Executor</li>
 <li>Debug Executor</li>
@@ -566,71 +535,49 @@ what resources are needed to run a task as the task is queued.</p>
 <li>Kubernetes Executor</li>
 <li>Scaling Out with Mesos (community contributed)</li>
 </ul>
-
 <p>CeleryExecutor is a better executor compared to the SequentialExecutor. The CeleryExecutor uses several
 workers to execute a job in a distributed way. If a worker node is ever down, the CeleryExecutor assign its
 task to another worker node. This ensures high availability.</p>
-
 <p>The CeleryExecutor works closely with the scheduler which adds a message to the queue and the Celery broker
 which delivers the message to a Celery worker to execute.
 You can find more information about the CeleryExecutor and how to configure it at the
-<a href="https://airflow.apache.org/docs/stable/executor/celery.html#celery-executor" target="_blank">documentation</a></p>
-
+<a href="https://airflow.apache.org/docs/stable/executor/celery.html#celery-executor">documentation</a></p>
 <h3 id="webserver">Webserver</h3>
-
 <p>The webserver is the web interface (UI) for Airflow. The UI is feature-rich. It makes it easy to
 monitor and troubleshoot DAGs and Tasks.</p>
-
-<p><img src="airflow-ui.png" alt="airflow UI" /></p>
-
+<p><img src="airflow-ui.png" alt="airflow UI"></p>
 <p>There are many actions you can perform on the UI. You can trigger a task, monitor the execution
 including the duration of the task. The UI makes it possible to view the task&rsquo;s dependencies in a
 tree view and graph view. You can view task logs in the UI.</p>
-
 <p>The web UI is started with the command <code>airflow webserver</code> in the breeze environment.</p>
-
 <h3 id="backend">Backend</h3>
-
 <p>By default, Airflow uses the SQLite backend for storing the configuration information, DAG states,
 and much other useful information. This should not be used in production as SQLite can cause a data
 loss.</p>
-
 <p>You can use PostgreSQL or MySQL as a backend for airflow. It is easy to change to PostgreSQL or MySQL.</p>
-
 <p>The command <code>./breeze --backend mysql</code> selects MySQL as the backend when starting the breeze environment.</p>
-
 <h3 id="operators">Operators</h3>
-
 <p>Operators determine what gets done by a task. Airflow has a lot of builtin Operators. Each operator
 does a specific task. There&rsquo;s a BashOperator that executes a bash command, the PythonOperator which
-calls a python function, AwsBatchOperator which executes a job on AWS Batch and <a href="https://airflow.apache.org/docs/stable/concepts.html#operators" target="_blank">many more</a>.</p>
-
+calls a python function, AwsBatchOperator which executes a job on AWS Batch and <a href="https://airflow.apache.org/docs/stable/concepts.html#operators">many more</a>.</p>
 <h4 id="sensors">Sensors</h4>
-
 <p>Sensors can be described as special operators that are used to monitor a long-running task.
 Just like Operators, there are many predefined sensors in Airflow. These includes</p>
-
 <ul>
 <li>AthenaSensor: Asks for the state of the Query until it reaches a failure state or success state.</li>
 <li>AzureCosmosDocumentSensor: Checks for the existence of a document which matches the given query in CosmosDB</li>
 <li>GoogleCloudStorageObjectSensor:  Checks for the existence of a file in Google Cloud Storage</li>
 </ul>
-
-<p>A list of most of the available sensors can be found in this <a href="https://airflow.apache.org/docs/stable/_api/airflow/contrib/sensors/index.html?highlight=sensors#module-airflow.contrib.sensors" target="_blank">module</a></p>
-
+<p>A list of most of the available sensors can be found in this <a href="https://airflow.apache.org/docs/stable/_api/airflow/contrib/sensors/index.html?highlight=sensors#module-airflow.contrib.sensors">module</a></p>
 <h3 id="contributing-to-airflow">Contributing to Airflow</h3>
-
 <p>Airflow is an open source project, everyone is welcome to contribute. It is easy to get started thanks
-to the excellent <a href="https://github.com/apache/airflow/blob/master/CONTRIBUTING.rst" target="_blank">documentation on how to get started</a>.</p>
-
-<p>I joined the community about 12 weeks ago through the <a href="https://www.outreachy.org/" target="_blank">Outreachy Program</a> and have
-completed about <a href="https://github.com/apache/airflow/pulls/ephraimbuddy" target="_blank">40 PRs</a>.</p>
-
-<p>It has been an amazing experience! Thanks to my mentors <a href="https://github.com/potiuk" target="_blank">Jarek</a> and
-<a href="https://github.com/kaxil" target="_blank">Kaxil</a>, and the community members especially <a href="https://github.com/mik-laj" target="_blank">Kamil</a>
-and <a href="https://github.com/turbaszek" target="_blank">Tomek</a> for all their support. I&rsquo;m grateful!</p>
-
-<p>Thank you so much, <a href="https://github.com/leahecole" target="_blank">Leah E. Cole</a>, for your wonderful reviews.</p>
+to the excellent <a href="https://github.com/apache/airflow/blob/master/CONTRIBUTING.rst">documentation on how to get started</a>.</p>
+<p>I joined the community about 12 weeks ago through the <a href="https://www.outreachy.org/">Outreachy Program</a> and have
+completed about <a href="https://github.com/apache/airflow/pulls/ephraimbuddy">40 PRs</a>.</p>
+<p>It has been an amazing experience! Thanks to my mentors <a href="https://github.com/potiuk">Jarek</a> and
+<a href="https://github.com/kaxil">Kaxil</a>, and the community members especially <a href="https://github.com/mik-laj">Kamil</a>
+and <a href="https://github.com/turbaszek">Tomek</a> for all their support. I&rsquo;m grateful!</p>
+<p>Thank you so much, <a href="https://github.com/leahecole">Leah E. Cole</a>, for your wonderful reviews.</p>
 
 </div>
 
@@ -962,13 +909,13 @@ and <a href="https://github.com/turbaszek" target="_blank">Tomek</a> for all the
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

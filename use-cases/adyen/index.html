@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -32,21 +32,15 @@
 <title>Adyen | Apache Airflow</title><meta property="og:title" content="Adyen" />
 <meta property="og:description" content="What was the problem? Many years ago we started out with our own orchestration framework. Due to all the required custom functionality it made sense at the time. However, quickly we realized creating an orchestration tool is not to be underestimated. With the quickly increasing number of users and teams, time spent on fixing issues increased, severely limiting development speed. Furthermore, due to it not being open source, we constantly had to make the effort ourselves to stay up to date with the industry standards and tools." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/use-cases/adyen/" />
+<meta property="og:url" content="/use-cases/adyen/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="use-cases" />
 
-<meta property="og:image" content="/images/feature-image.png" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Adyen">
 <meta itemprop="description" content="What was the problem? Many years ago we started out with our own orchestration framework. Due to all the required custom functionality it made sense at the time. However, quickly we realized creating an orchestration tool is not to be underestimated. With the quickly increasing number of users and teams, time spent on fixing issues increased, severely limiting development speed. Furthermore, due to it not being open source, we constantly had to make the effort ourselves to stay up to date with the industry standards and tools.">
-
-
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="405">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="405"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Adyen"/>
@@ -58,8 +52,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -72,8 +66,8 @@
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -95,10 +89,10 @@
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -449,20 +443,12 @@
 
     
     <div class="markdown-content">
-        
-
-<h5 id="what-was-the-problem">What was the problem?</h5>
-
+        <h5 id="what-was-the-problem">What was the problem?</h5>
 <p>Many years ago we started out with our own orchestration framework. Due to all the required custom functionality it made sense at the time. However, quickly we realized creating an orchestration tool is not to be underestimated.  With the quickly increasing number of users and teams, time spent on fixing issues increased, severely limiting development speed. Furthermore, due to it not being open source, we constantly had to make the effort ourselves to stay up to date with the industry standards and tools. We needed a tool for our Big Data Platform to schedule and execute many ETL jobs while at the same time, giving our users the possibility to redo or undo their tasks.</p>
-
 <h5 id="how-did-apache-airflow-help-to-solve-this-problem">How did Apache Airflow help to solve this problem?</h5>
-
 <p>Apache Airflow enabled us to extend upon the already existing operators and sensors to make writing ETL DAGs as easy as possible.  Within a couple minutes of training, data scientists are able to write their own DAGs containing an Apache Spark job and its corresponding dependencies. The Web UI allows our data scientists to closely monitor the status and logs of the jobs so that they can quickly interfere if something is not going as planned. We created our own access groups such that teams have full privileges on their own DAGs while only read privileges on other teams DAGs.</p>
-
 <p>One powerful functionality of Apache Airflow is the ability to backfill. This is helpful when new tasks are introduced or old jobs need to be rerun. By creating our own plugin for Apache Airflow, we built a simple tool to streamline back-filling. Besides clearing the runs, it also clears the underlying data that was generated by the Spark Job. Coming from Apache Airflow 1.10, this plugin only required minor changes to support Apache Airflow 2.0.</p>
-
 <h5 id="what-are-the-results">What are the results?</h5>
-
 <p>We started out with having a full team just working on our orchestration tool. With the help of Apache Airflow we managed to give the responsibility of maintaining DAGs back to the data scientist teams. This allowed us to grow quicker than ever to 20 teams that own in total approximately 200 DAGs and over 5000 tasks. In the meantime, our team has been able to extend Apache Airflow further while also focussing on getting other new exciting technologies on-board. With airflow, we now spend our time making progress instead of getting stuck fixing all sorts of issues.</p>
 
     </div>
@@ -653,13 +639,13 @@
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

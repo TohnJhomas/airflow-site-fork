@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -33,14 +33,10 @@
 <title>Roadmap | Apache Airflow</title><meta property="og:title" content="Roadmap" />
 <meta property="og:description" content="Platform created by the community to programmatically author, schedule and monitor workflows." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/roadmap/" />
+<meta property="og:url" content="/roadmap/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="og:site_name" content="Apache Airflow" />
 
-<meta property="og:image" content="/images/feature-image.png" />
-<meta property="og:site_name" content="Apache Airflow" />
 <meta itemprop="name" content="Roadmap">
-<meta itemprop="description" content="Platform created by the community to programmatically author, schedule and monitor workflows.">
-
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="description" content="Platform created by the community to programmatically author, schedule and monitor workflows."><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Roadmap"/>
@@ -52,8 +48,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -66,8 +62,8 @@
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -89,10 +85,10 @@
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -569,11 +565,8 @@
             
     <div class="rst-content">
         <h1>Roadmap</h1>
-        
-
-<p>TODO: Roadmap page is temporarily hidden. When the content is ready, re-add the page by putting the following code
+        <p>TODO: Roadmap page is temporarily hidden. When the content is ready, re-add the page by putting the following code
 in the frontmatter:</p>
-
 <pre><code>---
 title: &quot;Roadmap&quot;
 linkTitle: &quot;Roadmap&quot;
@@ -583,30 +576,23 @@ menu:
     weight: 15
 ---
 </code></pre>
-
 <h2 id="primary-heading-a">Primary Heading A</h2>
-
 <p>One thing to wrap your head around (it may not be very intuitive for everyone at first) is that this Airflow Python
 script is really just a configuration file specifying the DAG’s structure as code. The actual tasks defined here will
 run in a different context from the context of this script. Different tasks run on different workers at different
 points in time, which means that this script cannot be used to cross communicate between tasks. Note that for
 this purpose we have a more advanced feature called XCom.</p>
-
 <p>People sometimes think of the DAG definition file as a place where they can do some actual data processing -
 that is not the case at all! The script’s purpose is to define a DAG object. It needs to evaluate quickly (seconds,
 not minutes) since the scheduler will execute it periodically to reflect the changes if any.</p>
-
 <p>People sometimes think of the DAG definition file as a place where they can do some actual data processing - that is not the case at all! The script’s purpose is to define a DAG object. It needs to evaluate quickly (seconds, not minutes) since the scheduler will execute it periodically to reflect the changes if any.</p>
-
 <h2 id="primary-heading-b">Primary Heading B</h2>
-
 <p>One thing to wrap your head around (it may not be very intuitive for everyone at first) is that this Airflow Python
 script is really just a configuration file specifying the DAG’s structure as code. The actual tasks defined here will
 run in a different context from the context of this script. Different tasks run on different workers at different
 points in time, which means that this script cannot be used to cross communicate between tasks. Note that for
 this purpose we have a more advanced feature called XCom.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Synchronize user data and set up
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Synchronize user data and set up
 </span><span class="c1"></span><span class="kd">var</span> <span class="nx">currentUser</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Talk</span><span class="p">.</span><span class="nx">User</span><span class="p">({</span>
     <span class="nx">id</span><span class="o">:</span> <span class="mi">79302</span><span class="p">,</span>                      <span class="c1">// user id
 </span><span class="c1"></span>    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;George Looney&#34;</span><span class="p">,</span>          <span class="c1">// full name
@@ -615,18 +601,14 @@ this purpose we have a more advanced feature called XCom.</p>
 <span class="kd">var</span> <span class="nx">session</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Talk</span><span class="p">.</span><span class="nx">Session</span><span class="p">({</span>
     <span class="nx">appId</span><span class="o">:</span> <span class="s2">&#34;9352938974&#34;</span><span class="p">,</span>            <span class="c1">// your TalkJS account id
 </span><span class="c1"></span>    <span class="nx">me</span><span class="o">:</span> <span class="nx">currentUser</span>                 <span class="c1">// make George the active user
-</span><span class="c1"></span><span class="p">});</span>
-</code></pre></div>
-
+</span><span class="c1"></span><span class="p">});</span></code></pre></div>
 <h2 id="primary-heading-c">Primary Heading C</h2>
-
 <p>One thing to wrap your head around (it may not be very intuitive for everyone at first) is that this Airflow Python
 script is really just a configuration file specifying the DAG’s structure as code. The actual tasks defined here will
 run in a different context from the context of this script. Different tasks run on different workers at different
 points in time, which means that this script cannot be used to cross communicate between tasks. Note that for
 this purpose we have a more advanced feature called XCom.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Synchronize user data and set up
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Synchronize user data and set up
 </span><span class="c1"></span><span class="kd">var</span> <span class="nx">currentUser</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Talk</span><span class="p">.</span><span class="nx">User</span><span class="p">({</span>
     <span class="nx">id</span><span class="o">:</span> <span class="mi">79302</span><span class="p">,</span>                      <span class="c1">// user id
 </span><span class="c1"></span>    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;George Looney&#34;</span><span class="p">,</span>          <span class="c1">// full name
@@ -635,21 +617,16 @@ this purpose we have a more advanced feature called XCom.</p>
 <span class="kd">var</span> <span class="nx">session</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Talk</span><span class="p">.</span><span class="nx">Session</span><span class="p">({</span>
     <span class="nx">appId</span><span class="o">:</span> <span class="s2">&#34;9352938974&#34;</span><span class="p">,</span>            <span class="c1">// your TalkJS account id
 </span><span class="c1"></span>    <span class="nx">me</span><span class="o">:</span> <span class="nx">currentUser</span>                 <span class="c1">// make George the active user
-</span><span class="c1"></span><span class="p">});</span>
-</code></pre></div>
-
+</span><span class="c1"></span><span class="p">});</span></code></pre></div>
 <h2 id="primary-heading-d">Primary Heading D</h2>
-
 <p>One thing to wrap your head around (it may not be very intuitive for everyone at first) is that this Airflow Python
 script is really just a configuration file specifying the DAG’s structure as code. The actual tasks defined here will
 run in a different context from the context of this script. Different tasks run on different workers at different
 points in time, which means that this script cannot be used to cross communicate between tasks. Note that for
 this purpose we have a more advanced feature called XCom.</p>
-
 <p>People sometimes think of the DAG definition file as a place where they can do some actual data processing -
 that is not the case at all! The script’s purpose is to define a DAG object. It needs to evaluate quickly (seconds,
 not minutes) since the scheduler will execute it periodically to reflect the changes if any.</p>
-
 <p>People sometimes think of the DAG definition file as a place where they can do some actual data processing - that is not the case at all! The script’s purpose is to define a DAG object. It needs to evaluate quickly (seconds, not minutes) since the scheduler will execute it periodically to reflect the changes if any.</p>
 
     </div>
@@ -820,13 +797,13 @@ not minutes) since the scheduler will execute it periodically to reflect the cha
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

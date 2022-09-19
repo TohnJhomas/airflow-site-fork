@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -32,21 +32,15 @@
 <title>Sift | Apache Airflow</title><meta property="og:title" content="Sift" />
 <meta property="og:description" content="What was the problem? At Sift, we’re constantly training machine learning models that feed into the core of Sift’s Digital Trust &amp; Safety platform. The platform gives our customers a way to discern suspicious online behavior from trustworthy behavior, allowing our customers to protect their online transactions, maintain the integrity of their content platforms, and keep their users’ accounts secure. To make this possible, we’ve built model training pipelines that consist of hundreds of steps in MapReduce and Spark, with complex requirements between them." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/use-cases/sift/" />
+<meta property="og:url" content="/use-cases/sift/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="use-cases" />
 
-<meta property="og:image" content="/images/feature-image.png" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Sift">
 <meta itemprop="description" content="What was the problem? At Sift, we’re constantly training machine learning models that feed into the core of Sift’s Digital Trust &amp; Safety platform. The platform gives our customers a way to discern suspicious online behavior from trustworthy behavior, allowing our customers to protect their online transactions, maintain the integrity of their content platforms, and keep their users’ accounts secure. To make this possible, we’ve built model training pipelines that consist of hundreds of steps in MapReduce and Spark, with complex requirements between them.">
-
-
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="641">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="641"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Sift"/>
@@ -58,8 +52,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -72,8 +66,8 @@
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -95,10 +89,10 @@
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -449,30 +443,17 @@
 
     
     <div class="markdown-content">
-        
-
-<h5 id="what-was-the-problem">What was the problem?</h5>
-
+        <h5 id="what-was-the-problem">What was the problem?</h5>
 <p>At Sift, we’re constantly training machine learning models that feed into the core of Sift’s Digital Trust &amp; Safety platform. The platform gives our customers a way to discern suspicious online behavior from trustworthy behavior, allowing our customers to protect their online transactions, maintain the integrity of their content platforms, and keep their users’ accounts secure. To make this possible, we’ve built model training pipelines that consist of hundreds of steps in MapReduce and Spark, with complex requirements between them.</p>
-
 <p>When we built these workflows, we found that we needed a centralized way to organize the interactions between the many steps in each workflow. But before Airflow, we didn’t have an easy way to express those dependencies. And as we added steps to the workflows, it became increasingly difficult to coordinate their dependencies and keep ML experiments in sync.</p>
-
 <p>It soon became clear that we needed a way to orchestrate both the scheduled execution of our jobs and the dependencies between steps of not only a single workflow, but of multiple workflows. We needed a way to dynamically create several experimental ML workflows at once that could each have their own code, dependencies, and tasks. Additionally, we needed a way to be able to monitor the status of tasks, and re-run or restart tasks from any given point in a workflow with ease.</p>
-
 <h5 id="how-did-apache-airflow-help-to-solve-this-problem">How did Apache Airflow help to solve this problem?</h5>
-
 <p>Airflow makes it easy to clearly define the interactions between various jobs, expanding the scope of what we can do in our model training pipelines. We now have the ability to schedule and coordinate all jobs while managing the dependencies between them using DAGs. Each of our main workflows, including our model training pipeline and  ETL pipelines, has its own DAG code that manages its tasks’ dependencies and the execution schedule for the pipeline. We even define dependencies between separate DAGs by using Airflow’s ExternalTaskSensor. This allows our DAGs to actually depend on each other and keep each one of them focused and compact in its scope.</p>
-
 <p>As part of our custom Airflow setup, we’ve built out a separate Airflow ecosystem for short-lived experimental DAGs as well, so that we can test changes to our jobs or run separate model training pipelines in isolation. Using deployment scripts that edit our DAGs when we upload them to Airflow, the same code that powers an existing DAG can be deployed in a separate, isolated environment with experimental edits. This means that each experiment can have its own isolated code, running in parallel with other pipelines, without accidentally touching others’ jobs or dependencies.</p>
-
 <p>Finally, Airflow has given us the ability to manage our tasks’ successes and failures through its user interface. Airflow allows us to track our tasks’ failures, duration, history, and logs in one central UI, and that same UI also allows us to easily retry single tasks, branches of a DAG, or entire DAGs.</p>
-
 <h5 id="what-are-the-results">What are the results?</h5>
-
 <p>Airflow initially gave us a way to solve our existing problems: we used Airflow to replace rigid crons with well-defined DAG dependencies, to build isolated ML experiments using short-lived DAGs, and to track our pipelines’ successes and failures.</p>
-
 <p>But even after that, Airflow helped us to grow beyond those initial challenges, and expanded the scope of what we could feasibly tackle. Airflow not only made it easier to manage our ever-expanding ML pipelines, but also allowed us to create entirely new pipelines, ranging from workflows that back up our production data to complex ETL pipelines that transform data into experimentation-ready formats.</p>
-
 <p>Airflow also allowed us to support a more diverse toolset. Shell scripts, Java, Python, Jupyter notebooks, and more - all of these can be managed from an Airflow DAG, allowing developers to utilize our data to test new ideas, generate insights, and improve our models with ease.</p>
 
     </div>
@@ -663,13 +644,13 @@
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

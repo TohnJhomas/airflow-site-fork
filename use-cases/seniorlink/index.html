@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -33,22 +33,16 @@
 <meta property="og:description" content="What was the problem? Here at Seniorlink, we provide services, support, and technology that engages family caregivers. One of our focuses is using data to bolster our knowledge and improve the experience of our users. Like many looking to build an effective data stack, we adopted a Python, Spark, Redshift, and Tableau core toolset.
 We had built a robust stack of batch processes to deliver value to the business, deploying these data services in AWS using a mixture of EMR, ECS, Lambda, and EC2." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/use-cases/seniorlink/" />
+<meta property="og:url" content="/use-cases/seniorlink/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="use-cases" />
 
-<meta property="og:image" content="/images/feature-image.png" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Seniorlink">
 <meta itemprop="description" content="What was the problem? Here at Seniorlink, we provide services, support, and technology that engages family caregivers. One of our focuses is using data to bolster our knowledge and improve the experience of our users. Like many looking to build an effective data stack, we adopted a Python, Spark, Redshift, and Tableau core toolset.
 We had built a robust stack of batch processes to deliver value to the business, deploying these data services in AWS using a mixture of EMR, ECS, Lambda, and EC2.">
-
-
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="400">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="400"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Seniorlink"/>
@@ -61,8 +55,8 @@ We had built a robust stack of batch processes to deliver value to the business,
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -75,8 +69,8 @@ We had built a robust stack of batch processes to deliver value to the business,
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -98,10 +92,10 @@ We had built a robust stack of batch processes to deliver value to the business,
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -452,22 +446,13 @@ We had built a robust stack of batch processes to deliver value to the business,
 
     
     <div class="markdown-content">
-        
-
-<h5 id="what-was-the-problem">What was the problem?</h5>
-
+        <h5 id="what-was-the-problem">What was the problem?</h5>
 <p>Here at Seniorlink, we provide services, support, and technology that engages family caregivers. One of our focuses is using data to bolster our knowledge and improve the experience of our users. Like many looking to build an effective data stack, we adopted a Python, Spark, Redshift, and Tableau core toolset.</p>
-
 <p>We had built a robust stack of batch processes to deliver value to the business, deploying these data services in AWS using a mixture of EMR, ECS, Lambda, and EC2. Moving fast, as many new endeavors do, we ultimately ended up with one monolithic batch process with many smaller satellite jobs. Given the scale and quantity of jobs, we began to lose transparency as to what was happening. Additionally, many jobs were launched in a single EMR cluster and so tightly coupled that a failure in one job required the recompute of all the jobs run on that cluster. These behaviors are highly inefficient, difficult to debug and result in long iteration periods given the duration of these batch jobs.</p>
-
 <p>We were beginning to lose precious time manually managing the schedules via AWS Datapiplines, AWS Lambdas, and ECS Tasks. Much of our development effort was spent waiting for the monolith to complete running to examine a smaller job within. Our best chance at keeping system transparency was active documentation in our internal wiki.</p>
-
 <h5 id="how-did-apache-airflow-help-to-solve-this-problem">How did Apache Airflow help to solve this problem?</h5>
-
 <p>Airflow gave us a way to orchestrate our disparate tools into a single place. Instead of dealing with multiple schedules, we have a straightforward UI to consider. We gained a great deal of transparency, being able to monitor the status of tasks, re-run or restart tasks from any given point in a workflow, and manage the dependencies between jobs using DAGs. We were able to decouple our monolith and schedule the resulting smaller tasks confidently.</p>
-
 <h5 id="what-are-the-results">What are the results?</h5>
-
 <p>Airflow increased the visibility of our batch processes through the use of the DAGs and the UI. Our end-to-end run time decreased by 20%, given our ability to decouple our monolithic batch jobs into several smaller ones. Our development and debugging time reduced with our ability to manage and isolate all our tasks. We were able to merge our diverse toolset into a more central location. Lastly, with its broad adoption, we were able to quickly push this new framework up to our production environment.</p>
 
     </div>
@@ -658,13 +643,13 @@ We had built a robust stack of batch processes to deliver value to the business,
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

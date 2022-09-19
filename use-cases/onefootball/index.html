@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -33,22 +33,16 @@
 <meta property="og:description" content="What was the problem? With millions of daily active users, managing the complexity of data engineering at Onefootball is a constant challenge. Lengthy crontabs, multiplication of custom API clients, erosion of confidence in the analytics served, increasing heroism (&ldquo;only one person can solve this issue&rdquo;). Those are the challenges that most teams face unless they consciously invest in their tools and processes.
 On top of that, new data tools appear each month: third party data sources, cloud providers solutions, different storage technologies&hellip; Managing all those integrations is costly and brittle, especially for small data engineering teams that are trying to do more with less." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/use-cases/onefootball/" />
+<meta property="og:url" content="/use-cases/onefootball/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="use-cases" />
 
-<meta property="og:image" content="/images/feature-image.png" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Onefootball">
 <meta itemprop="description" content="What was the problem? With millions of daily active users, managing the complexity of data engineering at Onefootball is a constant challenge. Lengthy crontabs, multiplication of custom API clients, erosion of confidence in the analytics served, increasing heroism (&ldquo;only one person can solve this issue&rdquo;). Those are the challenges that most teams face unless they consciously invest in their tools and processes.
 On top of that, new data tools appear each month: third party data sources, cloud providers solutions, different storage technologies&hellip; Managing all those integrations is costly and brittle, especially for small data engineering teams that are trying to do more with less.">
-
-
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="294">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="294"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Onefootball"/>
@@ -61,8 +55,8 @@ On top of that, new data tools appear each month: third party data sources, clou
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -75,8 +69,8 @@ On top of that, new data tools appear each month: third party data sources, clou
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -98,10 +92,10 @@ On top of that, new data tools appear each month: third party data sources, clou
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -452,22 +446,13 @@ On top of that, new data tools appear each month: third party data sources, clou
 
     
     <div class="markdown-content">
-        
-
-<h5 id="what-was-the-problem">What was the problem?</h5>
-
+        <h5 id="what-was-the-problem">What was the problem?</h5>
 <p>With millions of daily active users, managing the complexity of data engineering at Onefootball is a constant challenge. Lengthy crontabs, multiplication of custom API clients, erosion of confidence in the analytics served, increasing heroism (&ldquo;only one person can solve this issue&rdquo;). Those are the challenges that most teams face unless they consciously invest in their tools and processes.</p>
-
 <p>On top of that, new data tools appear each month: third party data sources, cloud providers solutions, different storage technologies&hellip; Managing all those integrations is costly and brittle, especially for small data engineering teams that are trying to do more with less.</p>
-
 <h5 id="how-did-apache-airflow-help-to-solve-this-problem">How did Apache Airflow help to solve this problem?</h5>
-
 <p>Airflow had been on our radar for a while until one day we took the leap. We used the DAG paradigm to migrate the pipelines running on crontabs. We benefited from the community Hooks and Operators to remove parts of our code, or to refactor the API clients specific to our business. We use the alerts, SLAs and the web UI to regain confidence in our analytics. We use our airflow internal PRs as catalysts for team discussion and to challenge our technical designs.</p>
-
 <p>We have DAGs orchestrating SQL transformations in our data warehouse, but also DAGs that are orchestrating functions ran against our Kubernetes cluster both for training Machine Learning models and sending daily analytics emails.</p>
-
 <h5 id="what-are-the-results">What are the results?</h5>
-
 <p>The learning curve was steep but in about 100 days we were able to efficiently use Airflow to manage the complexity of our data engineering. We currently have 17 DAGs (adding on average 1 per week), we have 2 contributions on apache/airflow, we have 7 internal hooks and operators and are planning to add more as our migration efforts continue.</p>
 
     </div>
@@ -658,13 +643,13 @@ On top of that, new data tools appear each month: third party data sources, clou
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

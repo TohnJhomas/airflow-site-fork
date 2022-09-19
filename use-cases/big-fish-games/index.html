@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -32,21 +32,15 @@
 <title>Big Fish Games | Apache Airflow</title><meta property="og:title" content="Big Fish Games" />
 <meta property="og:description" content="What was the problem? The main challenge is the lack of standardized ETL workflow orchestration tools. PowerShell and Python-based ETL frameworks built in-house are currently used for scheduling and running analytical workloads. However, there is no web UI through which we can monitor these workflows and it requires additional effort to maintain this framework. These scheduled jobs based on external dependencies are not well suited to modern Big Data platforms and their complex workflows." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/use-cases/big-fish-games/" />
+<meta property="og:url" content="/use-cases/big-fish-games/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="use-cases" />
 
-<meta property="og:image" content="/images/feature-image.png" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Big Fish Games">
 <meta itemprop="description" content="What was the problem? The main challenge is the lack of standardized ETL workflow orchestration tools. PowerShell and Python-based ETL frameworks built in-house are currently used for scheduling and running analytical workloads. However, there is no web UI through which we can monitor these workflows and it requires additional effort to maintain this framework. These scheduled jobs based on external dependencies are not well suited to modern Big Data platforms and their complex workflows.">
-
-
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="336">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="336"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Big Fish Games"/>
@@ -58,8 +52,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -72,8 +66,8 @@
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -95,10 +89,10 @@
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -449,18 +443,11 @@
 
     
     <div class="markdown-content">
-        
-
-<h5 id="what-was-the-problem">What was the problem?</h5>
-
+        <h5 id="what-was-the-problem">What was the problem?</h5>
 <p>The main challenge is the lack of standardized  ETL workflow orchestration tools. PowerShell and Python-based ETL frameworks built in-house are currently used for scheduling and running analytical workloads. However, there is no web UI through which we can monitor these workflows and it requires additional effort to maintain this framework. These scheduled jobs based on external dependencies are not well suited to modern Big Data platforms and their complex workflows. Although we experimented with Apache Oozie for certain workflows, it did not handle failed jobs properly. For late data arrival, these tools are not flexible enough to enforce retry attempts for the job failures.</p>
-
 <h5 id="how-did-apache-airflow-help-to-solve-this-problem">How did Apache Airflow help to solve this problem?</h5>
-
 <p>Apache Airflow helps us programmatically control our workflows in Python by setting task dependencies and monitoring tasks within each DAG in a Web UI. Airflow allows us to view detailed logs for each task in these complex workflows. It has built-in connectors for Hive, MySQL, Google Cloud APIs and others. It also lends us flexibility to create our own custom connectors (i.e. for a Netezza database) using JDBCHook and JDBCOperator or extend the existing operator such as Hive Operator. For complex workflows, we can design ETLs using Airflow by running certain tasks only on weekdays. A powerful feature of Airflow is its support for backfilling of data: when we add a new task to a DAG, we can backfill for that task alone. Airflow also allows us to set external DAG dependencies alongside features such as SQLSensor on a database table to run a specific task.</p>
-
 <h5 id="what-are-the-results">What are the results?</h5>
-
 <p>We seek to run concurrent tasks with DAGs and concurrent DAGs using Apache Airflow, in hopes of running our entire ETL workload faster. Airflow helps our analysts and developers focus on the analyses, rather than labor over building an ETL framework to schedule and monitor our applications. Airflow facilitates a seamless ETL migration to the Google Cloud Platform (GCP), as GCP maintains Cloud Composer, an Apache Airflow managed service.</p>
 
     </div>
@@ -651,13 +638,13 @@
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

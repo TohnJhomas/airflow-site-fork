@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -32,23 +32,15 @@
 <title>What&#39;s new in Apache Airflow 2.2.0 | Apache Airflow</title><meta property="og:title" content="What&#39;s new in Apache Airflow 2.2.0" />
 <meta property="og:description" content="We&#39;re proud to announce that Apache Airflow 2.2.0 has been released." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/airflow-2.2.0/" />
-
-<meta property="og:image" content="/images/feature-image.png" />
+<meta property="og:url" content="/blog/airflow-2.2.0/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-10-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="What&#39;s new in Apache Airflow 2.2.0">
-<meta itemprop="description" content="We&#39;re proud to announce that Apache Airflow 2.2.0 has been released.">
-
-
-<meta itemprop="datePublished" content="2021-10-11T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="658">
-
-
-
-<meta itemprop="keywords" content="Release," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="description" content="We&#39;re proud to announce that Apache Airflow 2.2.0 has been released."><meta itemprop="datePublished" content="2021-10-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="658"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="Release," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="What&#39;s new in Apache Airflow 2.2.0"/>
@@ -60,8 +52,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -74,8 +66,8 @@
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -97,10 +89,10 @@
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -480,81 +472,49 @@
     <p class="blogpost-content__metadata--description">We&#39;re proud to announce that Apache Airflow 2.2.0 has been released.</p>
 </div>
 <div class="markdown-content">
-    
-
-<p>I’m proud to announce that Apache Airflow 2.2.0 has been released. It contains over 600 commits since 2.1.4 and includes 30 new features, 84 improvements, 85 bug fixes, and many internal and doc changes.</p>
-
+    <p>I’m proud to announce that Apache Airflow 2.2.0 has been released. It contains over 600 commits since 2.1.4 and includes 30 new features, 84 improvements, 85 bug fixes, and many internal and doc changes.</p>
 <p><strong>Details</strong>:</p>
-
-<p>📦 PyPI: <a href="https://pypi.org/project/apache-airflow/2.2.0/" target="_blank">https://pypi.org/project/apache-airflow/2.2.0/</a> <br />
-📚 Docs: <a href="https://airflow.apache.org/docs/apache-airflow/2.2.0/" target="_blank">https://airflow.apache.org/docs/apache-airflow/2.2.0/</a> <br />
-🛠️ Changelog: <a href="https://airflow.apache.org/docs/apache-airflow/2.2.0/changelog.html" target="_blank">https://airflow.apache.org/docs/apache-airflow/2.2.0/changelog.html</a> <br />
-🐳 Docker Image: docker pull apache/airflow:2.2.0 <br />
-🚏 Constraints: <a href="https://github.com/apache/airflow/tree/constraints-2.2.0" target="_blank">https://github.com/apache/airflow/tree/constraints-2.2.0</a></p>
-
+<p>📦 PyPI: <a href="https://pypi.org/project/apache-airflow/2.2.0/">https://pypi.org/project/apache-airflow/2.2.0/</a> <br>
+📚 Docs: <a href="https://airflow.apache.org/docs/apache-airflow/2.2.0/">https://airflow.apache.org/docs/apache-airflow/2.2.0/</a> <br>
+🛠️ Changelog: <a href="https://airflow.apache.org/docs/apache-airflow/2.2.0/changelog.html">https://airflow.apache.org/docs/apache-airflow/2.2.0/changelog.html</a> <br>
+🐳 Docker Image: docker pull apache/airflow:2.2.0 <br>
+🚏 Constraints: <a href="https://github.com/apache/airflow/tree/constraints-2.2.0">https://github.com/apache/airflow/tree/constraints-2.2.0</a></p>
 <p>As the changelog is quite large, the following are some notable new features that shipped in this release.</p>
-
 <h2 id="custom-timetables-aip-39">Custom Timetables (AIP-39)</h2>
-
 <p>Airflow has historically used cron expressions and timedeltas to represent when a DAG should run. This worked for a lot of use cases, but not all. For example, running daily on Monday-Friday, but not on weekends wasn’t possible.</p>
-
 <p>To provide more scheduling flexibility, determining when a DAG should run is now done with Timetables. Of course, backwards compatibility has been maintained - cron expressions and timedeltas are still fully supported, however, timetables are pluggable so you can add your own custom timetable to fit your needs! For example, you could write a timetable to schedule a DagRun</p>
-
 <p><code>execution_date</code> has long been confusing to new Airflowers, so as part of this change a new concept has been added to Airflow to replace it named <code>data_interval</code>, which is the period of data that a task should operate on. The following are now available:</p>
-
 <ul>
 <li><code>logical_date</code> (aka <code>execution_date</code>)</li>
 <li><code>data_interval_start</code> (same value as <code>execution_date</code> for cron)</li>
 <li><code>data_interval_end</code> (aka <code>next_execution_date</code>)</li>
 </ul>
-
 <p>If you write your own timetables, keep in mind they should be idempotent and fast as they are used in the scheduler to create DagRuns.</p>
-
-<p>More information can be found at: <a href="https://airflow.apache.org/docs/apache-airflow/stable/howto/timetable.html" target="_blank">Customizing DAG Scheduling with Timetables</a></p>
-
+<p>More information can be found at: <a href="https://airflow.apache.org/docs/apache-airflow/stable/howto/timetable.html">Customizing DAG Scheduling with Timetables</a></p>
 <h2 id="deferrable-tasks-aip-40">Deferrable Tasks (AIP-40)</h2>
-
 <p>Deferrable tasks allows operators or sensors to defer themselves until a light-weight async check passes, at which point they can resume executing. Most importantly, this results in the worker slot, and most notably any resources used by it, to be returned to Airflow. This allows simple things like monitoring a job in an external system or watching for an event to be much cheaper.</p>
-
 <p>To support this feature, a new component has been added to Airflow, the triggerer, which is the daemon process that runs the asyncio event loop.</p>
-
 <p>Airflow 2.2.0 ships with 2 deferrable sensors, <code>DateTimeSensorAsync</code> and <code>TimeDeltaSensorAsync</code>, both of which are drop-in replacements for the existing corresponding sensor.</p>
-
 <p>More information can be found at:</p>
-
-<p><a href="https://airflow.apache.org/docs/apache-airflow/stable/concepts/deferring.html" target="_blank">Deferrable Operators &amp; Triggers</a></p>
-
-<h2 id="custom-task-decorators-and-task-docker">Custom <code>@task</code> decorators and <code>@task.docker</code></h2>
-
+<p><a href="https://airflow.apache.org/docs/apache-airflow/stable/concepts/deferring.html">Deferrable Operators &amp; Triggers</a></p>
+<h2 id="custom-task-decorators-and-taskdocker">Custom <code>@task</code> decorators and <code>@task.docker</code></h2>
 <p>Airflow 2.2.0 allows providers to create custom <code>@task</code> decorators in the TaskFlow interface.</p>
-
 <p>The <code>@task.docker</code> decorator is one such decorator that allows you to run a function in a docker container. Airflow handles getting the code into the container and returning xcom - you just worry about your function. This is particularly useful when you have conflicting dependencies between Airflow itself and tasks you need to run.</p>
-
-<p>More information on creating custom <code>@task</code> decorators can be found at: <a href="https://airflow.apache.org/docs/apache-airflow/stable/howto/create-custom-decorator.html" target="_blank">Creating Custom @task Decorators</a></p>
-
-<p>More information on the <code>@task.docker</code> decorator can be found at: <a href="https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html#using-the-taskflow-api-with-docker-or-virtual-environments" target="_blank">Using the Taskflow API with Docker or Virtual Environments</a></p>
-
+<p>More information on creating custom <code>@task</code> decorators can be found at: <a href="https://airflow.apache.org/docs/apache-airflow/stable/howto/create-custom-decorator.html">Creating Custom @task Decorators</a></p>
+<p>More information on the <code>@task.docker</code> decorator can be found at: <a href="https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html#using-the-taskflow-api-with-docker-or-virtual-environments">Using the Taskflow API with Docker or Virtual Environments</a></p>
 <h2 id="validation-of-dag-params">Validation of DAG params</h2>
-
-<p>You can now apply validation on DAG params by passing a <code>Param</code> object for each param. The <code>Param</code> object supports the full <a href="https://json-schema.org/draft/2020-12/json-schema-validation.html" target="_blank">json-schema validation specifications</a>.</p>
-
+<p>You can now apply validation on DAG params by passing a <code>Param</code> object for each param. The <code>Param</code> object supports the full <a href="https://json-schema.org/draft/2020-12/json-schema-validation.html">json-schema validation specifications</a>.</p>
 <p>Currently this only functions with manually triggered DAGs, but it does set the stage for future params related functionality.</p>
-
-<p>More information can be found at: <a href="https://airflow.apache.org/docs/apache-airflow/stable/concepts/params.html" target="_blank">Params</a></p>
-
+<p>More information can be found at: <a href="https://airflow.apache.org/docs/apache-airflow/stable/concepts/params.html">Params</a></p>
 <h2 id="other-small-features">Other small features</h2>
-
 <p>This isn’t a comprehensive list, but some noteworthy or interesting small features include:</p>
-
 <ul>
 <li>Testing Connections from the UI - test the credentials for your Connection actually work</li>
 <li>Duplication Connections from the UI</li>
 <li>DAGs “Next run” info is shown in the UI, including when the run will actually start</li>
 <li><code>airflow standalone</code> command runs all of the Airflow components directly without docker - great for local development</li>
 </ul>
-
 <h2 id="contributors">Contributors</h2>
-
 <p>Thanks to everyone who contributed to this release: Andrew Godwin, Ash Berlin-Taylor, Brent Bovenzi, Elad Kalif, Ephraim Anierobi, James Timmins, Jarek Potiuk, Jed Cunningham, Josh Fell, Kamil Breguła, Kaxil Naik, Malthe Borch, Sam Wheating, Sumit Maheshwari, Tzu-ping Chung and many others</p>
 
 </div>
@@ -653,17 +613,17 @@
                     
                 
             </div>
-            <span class="bodytext__medium--brownish-grey box-event__blogpost--date">Sat, Apr 30, 2022</span>
+            <span class="bodytext__medium--brownish-grey box-event__blogpost--date">Mon, Sep 19, 2022</span>
         </div>
         <p class="box-event__blogpost--header">
-            <a href="/blog/airflow-2.3.0/">
-                Apache Airflow 2.3.0 is here
+            <a href="/blog/airflow-2.4.0/">
+                Apache Airflow 2.4.0: That Data Aware Release
             </a>
         </p>
-        <p class="box-event__blogpost--author">Ephraim Anierobi</p>
-        <p class="box-event__blogpost--description">We&#39;re proud to announce that Apache Airflow 2.3.0 has been released.</p>
+        <p class="box-event__blogpost--author">Ash Berlin-Taylor</p>
+        <p class="box-event__blogpost--description">We&#39;re proud to announce that Apache Airflow 2.4.0 has been released with many exciting improvements.</p>
         <div class="mt-auto">
-            <a href="/blog/airflow-2.3.0/">
+            <a href="/blog/airflow-2.4.0/">
                 
 
 <button class="btn-hollow btn-blue bodytext__medium--cerulean-blue" >Read more</button>
@@ -688,17 +648,17 @@
                     
                 
             </div>
-            <span class="bodytext__medium--brownish-grey box-event__blogpost--date">Thu, Dec 17, 2020</span>
+            <span class="bodytext__medium--brownish-grey box-event__blogpost--date">Sat, Apr 30, 2022</span>
         </div>
         <p class="box-event__blogpost--header">
-            <a href="/blog/airflow-two-point-oh-is-here/">
-                Apache Airflow 2.0 is here!
+            <a href="/blog/airflow-2.3.0/">
+                Apache Airflow 2.3.0 is here
             </a>
         </p>
-        <p class="box-event__blogpost--author">Ash Berlin-Taylor</p>
-        <p class="box-event__blogpost--description">We&#39;re proud to announce that Apache Airflow 2.0.0 has been released.</p>
+        <p class="box-event__blogpost--author">Ephraim Anierobi</p>
+        <p class="box-event__blogpost--description">We&#39;re proud to announce that Apache Airflow 2.3.0 has been released.</p>
         <div class="mt-auto">
-            <a href="/blog/airflow-two-point-oh-is-here/">
+            <a href="/blog/airflow-2.3.0/">
                 
 
 <button class="btn-hollow btn-blue bodytext__medium--cerulean-blue" >Read more</button>
@@ -883,13 +843,13 @@
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>

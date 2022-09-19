@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
         <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -557,12 +557,12 @@
   <blockquote>
 <div></div></blockquote>
 <div class="section" id="image-build-arguments-reference">
-<h1>Image build arguments reference<a class="headerlink" href="#image-build-arguments-reference" title="Permalink to this headline">¶</a></h1>
+<h1>Image build arguments reference<a class="headerlink" href="#image-build-arguments-reference" title="Permalink to this heading">¶</a></h1>
 <p>The following build arguments (<code class="docutils literal notranslate"><span class="pre">--build-arg</span></code> in docker build command) can be used for production images.
 Those arguments are used when you want to customize the image. You can see some examples of it in
 <a class="reference internal" href="build.html#image-build-pypi"><span class="std std-ref">Building from PyPI packages</span></a>.</p>
 <div class="section" id="basic-arguments">
-<h2>Basic arguments<a class="headerlink" href="#basic-arguments" title="Permalink to this headline">¶</a></h2>
+<h2>Basic arguments<a class="headerlink" href="#basic-arguments" title="Permalink to this heading">¶</a></h2>
 <p>Those are the most common arguments that you use when you want to build a custom image.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -582,7 +582,7 @@ Those arguments are used when you want to customize the image. You can see some 
 <td><p>Base python image.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_VERSION</span></code></p></td>
-<td><p><code class="code docutils literal notranslate"><span class="pre">2.3.2</span></code></p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">2.4.0</span></code></p></td>
 <td><p>version of Airflow.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_EXTRAS</span></code></p></td>
@@ -605,25 +605,31 @@ SQLite databases are stored).</p></td>
 <td><p>Home directory of the Airflow user.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_PIP_VERSION</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">22.1.2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">22.2.2</span></code></p></td>
 <td><p>PIP version used.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">PIP_PROGRESS_BAR</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ADDITIONAL_PIP_INSTALL_FLAGS</span></code></p></td>
+<td></td>
+<td><p>additional <code class="docutils literal notranslate"><span class="pre">pip</span></code> flags passed to the
+installation commands (except when
+reinstalling <code class="docutils literal notranslate"><span class="pre">pip</span></code> itself)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PIP_PROGRESS_BAR</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">on</span></code></p></td>
 <td><p>Progress bar for PIP installation</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_UID</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_UID</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">50000</span></code></p></td>
 <td><p>Airflow user UID.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_CONSTRAINTS</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_CONSTRAINTS</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">constraints</span></code></p></td>
 <td><p>Type of constraints to build the image.
 This can be <code class="docutils literal notranslate"><span class="pre">constraints</span></code> for regular
 images or <code class="docutils literal notranslate"><span class="pre">constraints-no-providers</span></code> for
 slim images.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_CONSTRAINTS_REFERENCE</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_CONSTRAINTS_REFERENCE</span></code></p></td>
 <td></td>
 <td><p>Reference (branch or tag) from GitHub
 where constraints file is taken from
@@ -632,7 +638,7 @@ It can be <code class="docutils literal notranslate"><span class="pre">constrain
 2.0.* installation. In case of building
 specific version you want to point it
 to specific tag, for example
-<code class="code docutils literal notranslate"><span class="pre">constraints-2.3.2</span></code>.
+<code class="code docutils literal notranslate"><span class="pre">constraints-2.4.0</span></code>.
 Auto-detected if empty.</p></td>
 </tr>
 </tbody>
@@ -673,7 +679,7 @@ functionality - only added confusion - so it has been removed.</p>
 </ul>
 </div>
 <div class="section" id="image-optimization-options">
-<h2>Image optimization options<a class="headerlink" href="#image-optimization-options" title="Permalink to this headline">¶</a></h2>
+<h2>Image optimization options<a class="headerlink" href="#image-optimization-options" title="Permalink to this heading">¶</a></h2>
 <p>The main advantage of Customization method of building Airflow image, is that it allows to build highly optimized image because
 the final image (RUNTIME) might not contain all the dependencies that are needed to build and install all other dependencies
 (DEV). Those arguments allow to control what is installed in the DEV image and what is installed in RUNTIME one, thus
@@ -706,7 +712,7 @@ reusing cached images with same value.</p></td>
 the image with some extra dependencies.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DEV_APT_COMMAND</span></code></p></td>
-<td><p>(see Dockerfile)</p></td>
+<td></td>
 <td><p>Dev apt command executed before dev deps
 are installed in the Build image.</p></td>
 </tr>
@@ -718,7 +724,8 @@ in the Build image. Should start with
 <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DEV_APT_DEPS</span></code></p></td>
-<td><p>(see Dockerfile)</p></td>
+<td><p>Empty - install default dependencies
+(see <code class="docutils literal notranslate"><span class="pre">install_os_dependencies.sh</span></code>)</p></td>
 <td><p>Dev APT dependencies installed
 in the Build image.</p></td>
 </tr>
@@ -733,19 +740,20 @@ installed in the Build image.</p></td>
 when installing dev deps.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RUNTIME_APT_COMMAND</span></code></p></td>
-<td><p>(see Dockerfile)</p></td>
+<td></td>
 <td><p>Runtime apt command executed before deps
-are installed in the Main image.</p></td>
+are installed in the <code class="docutils literal notranslate"><span class="pre">main</span></code> stage.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ADDITIONAL_RUNTIME_APT_COMMAND</span></code></p></td>
 <td></td>
 <td><p>Additional Runtime apt command executed
 before runtime dep are installed
-in the Main image. Should start with
+in the <code class="docutils literal notranslate"><span class="pre">main</span></code> stage. Should start with
 <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RUNTIME_APT_DEPS</span></code></p></td>
-<td><p>(see Dockerfile)</p></td>
+<td><p>Empty - install default dependencies
+(see <code class="docutils literal notranslate"><span class="pre">install_os_dependencies.sh</span></code>)</p></td>
 <td><p>Runtime APT dependencies installed
 in the Main image.</p></td>
 </tr>
@@ -778,7 +786,7 @@ installed</p></td>
 </table>
 </div>
 <div class="section" id="installing-airflow-using-different-methods">
-<h2>Installing Airflow using different methods<a class="headerlink" href="#installing-airflow-using-different-methods" title="Permalink to this headline">¶</a></h2>
+<h2>Installing Airflow using different methods<a class="headerlink" href="#installing-airflow-using-different-methods" title="Permalink to this heading">¶</a></h2>
 <p>Those parameters are useful only if you want to install Airflow using different installation methods than the default
 (installing from PyPI packages).</p>
 <p>This is usually only useful if you have your own fork of Airflow and want to build the images locally from
@@ -831,20 +839,6 @@ you install Airflow from local sources</p></td>
 “/opt/airflow” when you install Airflow
 from local sources.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_SOURCES_WWW_FROM</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code></p></td>
-<td><p>Sources of Airflow WWW files used for
-asset compilation. Set it to
-“./airflow/www” when
-you install Airflow from local sources</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_SOURCES_WWW_TO</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/Dockerfile</span></code></p></td>
-<td><p>Target for Airflow files used for
-asset compilation. Set it to
-“/opt/airflow/airflow/www” when
-you install Airflow from local sources.</p></td>
-</tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_VERSION_SPECIFICATION</span></code></p></td>
 <td></td>
 <td><p>Optional - might be used for using limit
@@ -889,18 +883,11 @@ from locally built/downloaded
 .whl and .tar.gz files placed in the
 <code class="docutils literal notranslate"><span class="pre">docker-context-files</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AIRFLOW_IS_IN_CONTEXT</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
-<td><p>If set to true, it means that Airflow
-and providers are available in context
-and the image will not attempt to
-install Airflow from PyPI or sources.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="pre-caching-pip-dependencies">
-<h2>Pre-caching PIP dependencies<a class="headerlink" href="#pre-caching-pip-dependencies" title="Permalink to this headline">¶</a></h2>
+<h2>Pre-caching PIP dependencies<a class="headerlink" href="#pre-caching-pip-dependencies" title="Permalink to this heading">¶</a></h2>
 <p>When image is build from PIP, by default pre-caching of PIP dependencies is used. This is in order to speed-up incremental
 builds during development. When pre-cached PIP dependencies are used and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> or <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> changes, the
 PIP dependencies are already pre-installed, thus resulting in much faster image rebuild. This is purely an optimization
@@ -1184,8 +1171,10 @@ Image builds and speeds up CI builds.</p></td>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
+        <script src="_static/js/globaltoc.js"></script>
 </body>
 </html>

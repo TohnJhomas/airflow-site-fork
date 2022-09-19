@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
         <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -573,11 +573,11 @@
                                     <div class="body" role="main">
                                         
   <div class="section" id="module-airflow.providers.discord.hooks.discord_webhook">
-<span id="airflow-providers-discord-hooks-discord-webhook"></span><h1><a class="reference internal" href="#module-airflow.providers.discord.hooks.discord_webhook" title="airflow.providers.discord.hooks.discord_webhook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.discord.hooks.discord_webhook</span></code></a><a class="headerlink" href="#module-airflow.providers.discord.hooks.discord_webhook" title="Permalink to this headline">¶</a></h1>
+<span id="airflow-providers-discord-hooks-discord-webhook"></span><h1><a class="reference internal" href="#module-airflow.providers.discord.hooks.discord_webhook" title="airflow.providers.discord.hooks.discord_webhook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.discord.hooks.discord_webhook</span></code></a><a class="headerlink" href="#module-airflow.providers.discord.hooks.discord_webhook" title="Permalink to this heading">¶</a></h1>
 <div class="section" id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
 <div class="section" id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">¶</a></h3>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -592,7 +592,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="airflow.providers.discord.hooks.discord_webhook.DiscordWebhookHook">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">airflow.providers.discord.hooks.discord_webhook.</span></span><span class="sig-name descname"><span class="pre">DiscordWebhookHook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">http_conn_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webhook_endpoint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../_modules/airflow/providers/discord/hooks/discord_webhook.html#DiscordWebhookHook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#airflow.providers.discord.hooks.discord_webhook.DiscordWebhookHook" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="/docs/apache-airflow-providers-http/stable/_api/airflow/providers/http/hooks/http/index.html#airflow.providers.http.hooks.http.HttpHook" title="(in apache-airflow-providers-http v3.0.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">airflow.providers.http.hooks.http.HttpHook</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="/docs/apache-airflow-providers-http/stable/_api/airflow/providers/http/hooks/http/index.html#airflow.providers.http.hooks.http.HttpHook" title="(in apache-airflow-providers-http v4.0.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">airflow.providers.http.hooks.http.HttpHook</span></code></a></p>
 <p>This hook allows you to post messages to Discord using incoming webhooks.
 Takes a Discord connection ID with a default relative webhook endpoint. The
 default endpoint can be overridden using the webhook_endpoint parameter
@@ -602,17 +602,17 @@ avatar_url. You can override these defaults in this hook.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>http_conn_id</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- Http connection ID with host as &quot;<a class="reference external" href="https://discord.com/api/">https://discord.com/api/</a>&quot; and
+<li><p><strong>http_conn_id</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – Http connection ID with host as “<a class="reference external" href="https://discord.com/api/">https://discord.com/api/</a>” and
 default webhook endpoint in the extra field in the form of
-{&quot;webhook_endpoint&quot;: &quot;webhooks/{webhook.id}/{webhook.token}&quot;}</p></li>
-<li><p><strong>webhook_endpoint</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- Discord webhook endpoint in the form of
-&quot;webhooks/{webhook.id}/{webhook.token}&quot;</p></li>
-<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- The message you want to send to your Discord channel
+{“webhook_endpoint”: “webhooks/{webhook.id}/{webhook.token}”}</p></li>
+<li><p><strong>webhook_endpoint</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – Discord webhook endpoint in the form of
+“webhooks/{webhook.id}/{webhook.token}”</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The message you want to send to your Discord channel
 (max 2000 characters)</p></li>
-<li><p><strong>username</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- Override the default username of the webhook</p></li>
-<li><p><strong>avatar_url</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- Override the default avatar of the webhook</p></li>
-<li><p><strong>tts</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- Is a text-to-speech message</p></li>
-<li><p><strong>proxy</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- Proxy to use to make the Discord webhook call</p></li>
+<li><p><strong>username</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – Override the default username of the webhook</p></li>
+<li><p><strong>avatar_url</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – Override the default avatar of the webhook</p></li>
+<li><p><strong>tts</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Is a text-to-speech message</p></li>
+<li><p><strong>proxy</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – Proxy to use to make the Discord webhook call</p></li>
 </ul>
 </dd>
 </dl>
@@ -638,7 +638,7 @@ default webhook endpoint in the extra field in the form of
 
 <dl class="py method">
 <dt class="sig sig-object py" id="airflow.providers.discord.hooks.discord_webhook.DiscordWebhookHook.execute">
-<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../_modules/airflow/providers/discord/hooks/discord_webhook.html#DiscordWebhookHook.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#airflow.providers.discord.hooks.discord_webhook.DiscordWebhookHook.execute" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../../../../_modules/airflow/providers/discord/hooks/discord_webhook.html#DiscordWebhookHook.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#airflow.providers.discord.hooks.discord_webhook.DiscordWebhookHook.execute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute the Discord webhook call</p>
 <dl class="field-list simple">
 </dl>
@@ -906,8 +906,10 @@ default webhook endpoint in the extra field in the form of
         <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
         <script src="../../../../../../_static/jquery.js"></script>
         <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../../../../_static/doctools.js"></script>
         <script src="../../../../../../_static/clipboard.min.js"></script>
         <script src="../../../../../../_static/copybutton.js"></script>
+        <script src="../../../../../../_static/js/globaltoc.js"></script>
 </body>
 </html>

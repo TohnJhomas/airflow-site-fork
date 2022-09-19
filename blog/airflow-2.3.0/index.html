@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.58.3" />
+<meta name="generator" content="Hugo 0.91.2" />
 
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
@@ -32,23 +32,15 @@
 <title>Apache Airflow 2.3.0 is here | Apache Airflow</title><meta property="og:title" content="Apache Airflow 2.3.0 is here" />
 <meta property="og:description" content="We&#39;re proud to announce that Apache Airflow 2.3.0 has been released." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/airflow-2.3.0/" />
-
-<meta property="og:image" content="/images/feature-image.png" />
+<meta property="og:url" content="/blog/airflow-2.3.0/" /><meta property="og:image" content="/images/feature-image.png"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2022-04-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-06-13T21:09:22+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+<meta property="article:modified_time" content="2022-09-19T13:00:06+02:00" /><meta property="og:site_name" content="Apache Airflow" />
+
 <meta itemprop="name" content="Apache Airflow 2.3.0 is here">
-<meta itemprop="description" content="We&#39;re proud to announce that Apache Airflow 2.3.0 has been released.">
-
-
-<meta itemprop="datePublished" content="2022-04-30T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2022-06-13T21:09:22&#43;02:00" />
-<meta itemprop="wordCount" content="708">
-
-
-
-<meta itemprop="keywords" content="Release," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="description" content="We&#39;re proud to announce that Apache Airflow 2.3.0 has been released."><meta itemprop="datePublished" content="2022-04-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-19T13:00:06+02:00" />
+<meta itemprop="wordCount" content="708"><meta itemprop="image" content="/images/feature-image.png"/>
+<meta itemprop="keywords" content="Release," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Apache Airflow 2.3.0 is here"/>
@@ -60,8 +52,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" as="style">
-<link href="/scss/main.min.0e7882f371bce728f76bf8b7ddd1a316055cb9c6fc7ff482c3679b51f0369984.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" as="style">
+<link href="/scss/main.min.6668c09ec5024c20cbf3e5c6d1f29463e1b7a1797526dc9cade6bda004c6da9d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -74,8 +66,8 @@
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" as="style">
-    <link href="/scss/main-custom.min.c1bafd243a3b8eac3d0e0518111642bc80af69f05c204c47682d42ef29747534.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" as="style">
+    <link href="/scss/main-custom.min.b146c52791775098518e5c07064df551c29020f3a5f275d109ce3fc563a07c83.css" rel="stylesheet" integrity="">
 
 
 
@@ -97,10 +89,10 @@
 
 
 
-<link rel="preload" href="/main.290f3.js" as="script">
-<link rel="preload" href="/chunk-1.290f3.js" as="script">
+<link rel="preload" href="/main.3d5f5.js" as="script">
+<link rel="preload" href="/chunk-1.3d5f5.js" as="script">
 
-<link rel="preload" href="/chunk-4.290f3.js" as="script">
+<link rel="preload" href="/chunk-4.3d5f5.js" as="script">
 
 
 
@@ -480,132 +472,87 @@
     <p class="blogpost-content__metadata--description">We&#39;re proud to announce that Apache Airflow 2.3.0 has been released.</p>
 </div>
 <div class="markdown-content">
-    
-
-<p>Apache Airflow 2.3.0 contains over 700 commits since 2.2.0 and includes 50 new features, 99 improvements, 85 bug fixes, and several doc changes.</p>
-
+    <p>Apache Airflow 2.3.0 contains over 700 commits since 2.2.0 and includes 50 new features, 99 improvements, 85 bug fixes, and several doc changes.</p>
 <p><strong>Details</strong>:</p>
-
-<p>📦 PyPI: <a href="https://pypi.org/project/apache-airflow/2.3.0/" target="_blank">https://pypi.org/project/apache-airflow/2.3.0/</a> <br />
-📚 Docs: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/" target="_blank">https://airflow.apache.org/docs/apache-airflow/2.3.0/</a> <br />
-🛠️ Release Notes: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/release_notes.html" target="_blank">https://airflow.apache.org/docs/apache-airflow/2.3.0/release_notes.html</a> <br />
-🐳 Docker Image: docker pull apache/airflow:2.3.0 <br />
-🚏 Constraints: <a href="https://github.com/apache/airflow/tree/constraints-2.3.0" target="_blank">https://github.com/apache/airflow/tree/constraints-2.3.0</a></p>
-
+<p>📦 PyPI: <a href="https://pypi.org/project/apache-airflow/2.3.0/">https://pypi.org/project/apache-airflow/2.3.0/</a> <br>
+📚 Docs: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/">https://airflow.apache.org/docs/apache-airflow/2.3.0/</a> <br>
+🛠️ Release Notes: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/release_notes.html">https://airflow.apache.org/docs/apache-airflow/2.3.0/release_notes.html</a> <br>
+🐳 Docker Image: docker pull apache/airflow:2.3.0 <br>
+🚏 Constraints: <a href="https://github.com/apache/airflow/tree/constraints-2.3.0">https://github.com/apache/airflow/tree/constraints-2.3.0</a></p>
 <p>As the changelog is quite large, the following are some notable new features that shipped in this release.</p>
-
-<h2 id="dynamic-task-mapping-aip-42">Dynamic Task Mapping(AIP-42)</h2>
-
+<h2 id="dynamic-task-mappingaip-42">Dynamic Task Mapping(AIP-42)</h2>
 <p>There&rsquo;s now first-class support for dynamic tasks in Airflow. What this means is that you can generate tasks dynamically at runtime. Much like using a <code>for</code> loop
 to create a list of tasks, here you can create the same tasks without having to know the exact number of tasks ahead of time.</p>
-
 <p>You can have a <code>task</code> generate the list to iterate over, which is not possible with a <code>for</code> loop.</p>
-
 <p>Here is an example:</p>
-
-<pre><code class="language-python">@task
-def make_list():
-    # This can also be from an API call, checking a database, -- almost anything you like, as long as the
-    # resulting list/dictionary can be stored in the current XCom backend.
-    return [1, 2, {&quot;a&quot;: &quot;b&quot;}, &quot;str&quot;]
-
-
-@task
-def consumer(arg):
-    print(list(arg))
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">make_list</span><span class="p">():</span>
+    <span class="c1"># This can also be from an API call, checking a database, -- almost anything you like, as long as the</span>
+    <span class="c1"># resulting list/dictionary can be stored in the current XCom backend.</span>
+    <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;a&#34;</span><span class="p">:</span> <span class="s2">&#34;b&#34;</span><span class="p">},</span> <span class="s2">&#34;str&#34;</span><span class="p">]</span>
 
 
-with DAG(dag_id=&quot;dynamic-map&quot;, start_date=datetime(2022, 4, 2)) as dag:
-    consumer.expand(arg=make_list())
-</code></pre>
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">consumer</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">arg</span><span class="p">))</span>
 
-<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/concepts/dynamic-task-mapping.html" target="_blank">Dynamic Task Mapping</a></p>
 
+<span class="k">with</span> <span class="n">DAG</span><span class="p">(</span><span class="n">dag_id</span><span class="o">=</span><span class="s2">&#34;dynamic-map&#34;</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="k">as</span> <span class="n">dag</span><span class="p">:</span>
+    <span class="n">consumer</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">make_list</span><span class="p">())</span>
+</code></pre></div><p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/concepts/dynamic-task-mapping.html">Dynamic Task Mapping</a></p>
 <h2 id="grid-view-replaces-tree-view">Grid View replaces Tree View</h2>
-
 <p>Grid view replaces tree view in Airflow 2.3.0.</p>
-
 <p><strong>Screenshots</strong>:
-<img src="grid-view.png" alt="The new grid view" /></p>
-
+<img src="grid-view.png" alt="The new grid view"></p>
 <h2 id="purge-history-from-metadata-database">Purge history from metadata database</h2>
-
 <p>Airflow 2.3.0 introduces a new <code>airflow db clean</code> command that can be used to purge old data from the metadata database.</p>
-
 <p>You would want to use this command if you want to reduce the size of the metadata database.</p>
-
-<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/usage-cli.html#purge-history-from-metadata-database" target="_blank">Purge history from metadata database</a></p>
-
+<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/usage-cli.html#purge-history-from-metadata-database">Purge history from metadata database</a></p>
 <h2 id="localkubernetesexecutor">LocalKubernetesExecutor</h2>
-
 <p>There is a new executor named LocalKubernetesExecutor. This executor helps you run some tasks using LocalExecutor and run another set of tasks using the KubernetesExecutor in the same deployment based on the task&rsquo;s queue.</p>
-
-<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/executor/local_kubernetes.html" target="_blank">LocalKubernetesExecutor</a></p>
-
+<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/executor/local_kubernetes.html">LocalKubernetesExecutor</a></p>
 <h2 id="dagprocessormanager-as-standalone-process-aip-43">DagProcessorManager as standalone process (AIP-43)</h2>
-
 <p>As of 2.3.0, you can run the DagProcessorManager as a standalone process. Because DagProcessorManager runs user code, separating it from the scheduler process and running it as an independent process in a different host is a good idea.</p>
-
-<p>The <code>airflow dag-processor</code> cli command will start a new process that will run the DagProcessorManager in a separate process. Before you can run the DagProcessorManager as a standalone process, you need to set the <a href="https://airflow.apache.org/docs/apache-airflow/stable/configurations-ref.html#standalone_dag_processor" target="_blank">[scheduler] standalone_dag_processor</a> to <code>True</code>.</p>
-
-<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/cli-and-env-variables-ref.html#dag-processor" target="_blank">dag-processor CLI command</a></p>
-
+<p>The <code>airflow dag-processor</code> cli command will start a new process that will run the DagProcessorManager in a separate process. Before you can run the DagProcessorManager as a standalone process, you need to set the <a href="https://airflow.apache.org/docs/apache-airflow/stable/configurations-ref.html#standalone_dag_processor">[scheduler] standalone_dag_processor</a> to <code>True</code>.</p>
+<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/cli-and-env-variables-ref.html#dag-processor">dag-processor CLI command</a></p>
 <h2 id="json-serialization-for-connections">JSON serialization for connections</h2>
-
 <p>You can now create connections using the <code>json</code> serialization format.</p>
-
-<pre><code class="language-bash">airflow connections add 'my_prod_db' \
-    --conn-json '{
-        &quot;conn_type&quot;: &quot;my-conn-type&quot;,
-        &quot;login&quot;: &quot;my-login&quot;,
-        &quot;password&quot;: &quot;my-password&quot;,
-        &quot;host&quot;: &quot;my-host&quot;,
-        &quot;port&quot;: 1234,
-        &quot;schema&quot;: &quot;my-schema&quot;,
-        &quot;extra&quot;: {
-            &quot;param1&quot;: &quot;val1&quot;,
-            &quot;param2&quot;: &quot;val2&quot;
-        }
-    }'
-</code></pre>
-
-<p>You can also use <code>json</code> serialization format when setting the connection in environment variables.</p>
-
-<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/howto/connection.html" target="_blank">JSON serialization for connections</a></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">airflow connections add <span class="s1">&#39;my_prod_db&#39;</span> <span class="se">\
+</span><span class="se"></span>    --conn-json <span class="s1">&#39;{
+</span><span class="s1">        &#34;conn_type&#34;: &#34;my-conn-type&#34;,
+</span><span class="s1">        &#34;login&#34;: &#34;my-login&#34;,
+</span><span class="s1">        &#34;password&#34;: &#34;my-password&#34;,
+</span><span class="s1">        &#34;host&#34;: &#34;my-host&#34;,
+</span><span class="s1">        &#34;port&#34;: 1234,
+</span><span class="s1">        &#34;schema&#34;: &#34;my-schema&#34;,
+</span><span class="s1">        &#34;extra&#34;: {
+</span><span class="s1">            &#34;param1&#34;: &#34;val1&#34;,
+</span><span class="s1">            &#34;param2&#34;: &#34;val2&#34;
+</span><span class="s1">        }
+</span><span class="s1">    }&#39;</span>
+</code></pre></div><p>You can also use <code>json</code> serialization format when setting the connection in environment variables.</p>
+<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/howto/connection.html">JSON serialization for connections</a></p>
 <h2 id="airflow-db-downgrade-and-offline-generation-of-sql-scripts">Airflow <code>db downgrade</code> and Offline generation of SQL scripts</h2>
-
 <p>Airflow 2.3.0 introduced a new command <code>airflow db downgrade</code> that will downgrade the database to your chosen version.</p>
-
 <p>You can also generate the downgrade/upgrade SQL scripts for your database and manually run it against your database or just view the SQL queries that would be run by the downgrade/upgrade command.</p>
-
-<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/usage-cli.html#downgrading-airflow" target="_blank">Airflow <code>db downgrade</code> and Offline generation of SQL scripts</a></p>
-
+<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/usage-cli.html#downgrading-airflow">Airflow <code>db downgrade</code> and Offline generation of SQL scripts</a></p>
 <h2 id="reuse-of-decorated-tasks">Reuse of decorated tasks</h2>
-
 <p>You can now reuse decorated tasks across your dag files. A decorated task has an <code>override</code> method that allows you to override it&rsquo;s arguments.</p>
-
 <p>Here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Task args: x=</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">, y=</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 
-<pre><code class="language-python">@task
-def add_task(x, y):
-    print(f&quot;Task args: x={x}, y={y}&quot;)
-    return x + y
 
-
-@dag(start_date=datetime(2022, 1, 1))
-def mydag():
-    start = add_task.override(task_id=&quot;start&quot;)(1, 2)
-    for i in range(3):
-        start &gt;&gt; add_task.override(task_id=f&quot;add_start_{i}&quot;)(start, i)
-</code></pre>
-
-<p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/tutorial_taskflow_api.html#reusing-a-decorated-task" target="_blank">Reuse of decorated DAGs</a></p>
-
+<span class="nd">@dag</span><span class="p">(</span><span class="n">start_date</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">mydag</span><span class="p">():</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">add_task</span><span class="o">.</span><span class="n">override</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="s2">&#34;start&#34;</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">start</span> <span class="o">&gt;&gt;</span> <span class="n">add_task</span><span class="o">.</span><span class="n">override</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&#34;add_start_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)(</span><span class="n">start</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</code></pre></div><p>More information can be found here: <a href="https://airflow.apache.org/docs/apache-airflow/2.3.0/tutorial_taskflow_api.html#reusing-a-decorated-task">Reuse of decorated DAGs</a></p>
 <h2 id="other-small-features">Other small features</h2>
-
 <p>This isn’t a comprehensive list, but some noteworthy or interesting small features include:</p>
-
 <ul>
 <li>Support different timeout value for dag file parsing</li>
 <li><code>airflow dags reserialize</code> command to reserialize dags</li>
@@ -613,9 +560,7 @@ def mydag():
 <li>SmoothOperator - Operator that does literally nothing except logging a YouTube link to
 Sade&rsquo;s &ldquo;Smooth Operator&rdquo;. Enjoy!</li>
 </ul>
-
 <h2 id="contributors">Contributors</h2>
-
 <p>Thanks to everyone who contributed to this release: Ash Berlin-Taylor, Brent Bovenzi, Daniel Standish, Elad, Ephraim Anierobi, Jarek Potiuk, Jed Cunningham, Josh Fell, Kamil Breguła, Kanthi, Kaxil Naik, Khalid Mammadov, Malthe Borch, Ping Zhang, Tzu-ping Chung and many others who keep making Airflow better for everyone.</p>
 
 </div>
@@ -714,17 +659,17 @@ Sade&rsquo;s &ldquo;Smooth Operator&rdquo;. Enjoy!</li>
                     
                 
             </div>
-            <span class="bodytext__medium--brownish-grey box-event__blogpost--date">Mon, Oct 11, 2021</span>
+            <span class="bodytext__medium--brownish-grey box-event__blogpost--date">Mon, Sep 19, 2022</span>
         </div>
         <p class="box-event__blogpost--header">
-            <a href="/blog/airflow-2.2.0/">
-                What&#39;s new in Apache Airflow 2.2.0
+            <a href="/blog/airflow-2.4.0/">
+                Apache Airflow 2.4.0: That Data Aware Release
             </a>
         </p>
-        <p class="box-event__blogpost--author">Jed Cunningham</p>
-        <p class="box-event__blogpost--description">We&#39;re proud to announce that Apache Airflow 2.2.0 has been released.</p>
+        <p class="box-event__blogpost--author">Ash Berlin-Taylor</p>
+        <p class="box-event__blogpost--description">We&#39;re proud to announce that Apache Airflow 2.4.0 has been released with many exciting improvements.</p>
         <div class="mt-auto">
-            <a href="/blog/airflow-2.2.0/">
+            <a href="/blog/airflow-2.4.0/">
                 
 
 <button class="btn-hollow btn-blue bodytext__medium--cerulean-blue" >Read more</button>
@@ -749,17 +694,17 @@ Sade&rsquo;s &ldquo;Smooth Operator&rdquo;. Enjoy!</li>
                     
                 
             </div>
-            <span class="bodytext__medium--brownish-grey box-event__blogpost--date">Thu, Dec 17, 2020</span>
+            <span class="bodytext__medium--brownish-grey box-event__blogpost--date">Mon, Oct 11, 2021</span>
         </div>
         <p class="box-event__blogpost--header">
-            <a href="/blog/airflow-two-point-oh-is-here/">
-                Apache Airflow 2.0 is here!
+            <a href="/blog/airflow-2.2.0/">
+                What&#39;s new in Apache Airflow 2.2.0
             </a>
         </p>
-        <p class="box-event__blogpost--author">Ash Berlin-Taylor</p>
-        <p class="box-event__blogpost--description">We&#39;re proud to announce that Apache Airflow 2.0.0 has been released.</p>
+        <p class="box-event__blogpost--author">Jed Cunningham</p>
+        <p class="box-event__blogpost--description">We&#39;re proud to announce that Apache Airflow 2.2.0 has been released.</p>
         <div class="mt-auto">
-            <a href="/blog/airflow-two-point-oh-is-here/">
+            <a href="/blog/airflow-2.2.0/">
                 
 
 <button class="btn-hollow btn-blue bodytext__medium--cerulean-blue" >Read more</button>
@@ -944,13 +889,13 @@ Sade&rsquo;s &ldquo;Smooth Operator&rdquo;. Enjoy!</li>
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 
 </body>
 
 
-    <script src="/main.290f3.js"></script>
+    <script src="/main.3d5f5.js"></script>
 
 </html>
