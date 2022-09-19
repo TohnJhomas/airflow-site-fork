@@ -561,4 +561,4 @@ According to the survey results, DAG Versioning is a winner for new features in 
 
 ## Data
 
-If you're interested in taking a look at the raw data yourself, it's available here: (Airflow User Survey 2022.csv)[/data/survey-responses/airflow-user-survey-responses-2022.csv.zip]
+If you're interested in taking a look at the raw data yourself, it's available here: [Airflow User Survey 2022.csv](/data/survey-responses/airflow-user-survey-responses-2022.csv.zip)

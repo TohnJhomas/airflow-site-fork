@@ -434,4 +434,4 @@ to share their experience and tools.
 
 ## Data
 
-If you think I missed something or you simply want to look for insights on your own, the data is available for you here: (Airflow User Survey 2020.csv)[/data/survey-responses/airflow-user-survey-responses-2020.csv.zip]
+If you think I missed something or you simply want to look for insights on your own, the data is available for you here: [Airflow User Survey 2020.csv](/data/survey-responses/airflow-user-survey-responses-2020.csv.zip)
