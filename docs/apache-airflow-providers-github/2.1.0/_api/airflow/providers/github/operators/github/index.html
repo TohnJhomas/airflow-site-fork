@@ -337,7 +337,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/apache/airflow/tree/providers-github/2.0.0/tests/system/providers/github">Example DAGs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/apache/airflow/tree/providers-github/2.1.0/tests/system/providers/github">Example DAGs</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://pypi.org/project/apache-airflow-providers-github/">PyPI Repository</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../../installing-providers-from-sources.html">Installing from sources</a></li>
 </ul>
@@ -484,7 +484,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/apache/airflow/tree/providers-github/2.0.0/tests/system/providers/github">Example DAGs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/apache/airflow/tree/providers-github/2.1.0/tests/system/providers/github">Example DAGs</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://pypi.org/project/apache-airflow-providers-github/">PyPI Repository</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../../installing-providers-from-sources.html">Installing from sources</a></li>
 </ul>
@@ -633,8 +633,8 @@ This operator is designed to use GitHub Python SDK: <a class="reference external
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>github_conn_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – reference to a pre-defined GitHub Connection</p></li>
 <li><p><strong>github_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – method name from GitHub Python SDK to be called</p></li>
-<li><p><strong>github_method_args</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>]</em>) – required method parameters for the github_method. (templated)</p></li>
-<li><p><strong>result_processor</strong> (<em>Optional</em><em>[</em><em>Callable</em><em>]</em>) – function to further process the response from GitHub API</p></li>
+<li><p><strong>github_method_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em> | </em><em>None</em>) – required method parameters for the github_method. (templated)</p></li>
+<li><p><strong>result_processor</strong> (<em>Callable</em><em> | </em><em>None</em>) – function to further process the response from GitHub API</p></li>
 </ul>
 </dd>
 </dl>

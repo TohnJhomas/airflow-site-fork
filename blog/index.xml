@@ -14,6 +14,43 @@
     
     
     <item>
+      <title>Blog: Apache Airflow 2.5.0: Tick-Tock</title>
+      <link>/blog/airflow-2.5.0/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/airflow-2.5.0/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Apache Airfow 2.5 has just been released, barely two and a half months after 2.4!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;📦 PyPI: &lt;a href=&#34;https://pypi.org/project/apache-airflow/2.5.0/&#34;&gt;https://pypi.org/project/apache-airflow/2.5.0/&lt;/a&gt; &lt;br&gt;
+📚 Docs: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.5.0/&#34;&gt;https://airflow.apache.org/docs/apache-airflow/2.5.0/&lt;/a&gt; &lt;br&gt;
+🛠️ Release Notes: &lt;a href=&#34;https://airflow.apache.org/docs/apache-airflow/2.5.0/release_notes.html&#34;&gt;https://airflow.apache.org/docs/apache-airflow/2.5.0/release_notes.html&lt;/a&gt; &lt;br&gt;
+🐳 Docker Image: docker pull apache/airflow:2.5.0 &lt;br&gt;
+🚏 Constraints: &lt;a href=&#34;https://github.com/apache/airflow/tree/constraints-2.5.0&#34;&gt;https://github.com/apache/airflow/tree/constraints-2.5.0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This quicker release cadence is a departure from our previous habit of releasing every five-to-seven months and was a deliberate effort to listen to you, our users, and get the changes and improvements into your workflows earlier.&lt;/p&gt;
+&lt;h2 id=&#34;usability-improvements-to-the-datasets-ui&#34;&gt;Usability improvements to the Datasets UI&lt;/h2&gt;
+&lt;p&gt;When we released Dataset aware scheduling in September we knew that the tools we gave to manage the Datasets were very much a Minimum Viable Product, and in the last two months the committers and contributors have been hard at work at making the UI much more usable when it comes to Datasets.&lt;/p&gt;
+&lt;p&gt;But we we aren&amp;rsquo;t done yet - keep an eye out for more improvements coming over the next couple of releases too.&lt;/p&gt;
+&lt;h2 id=&#34;greatly-improved-airflow-dags-test-command&#34;&gt;Greatly improved &lt;code&gt;airflow dags test&lt;/code&gt; command&lt;/h2&gt;
+&lt;p&gt;This airflow subcommand has been rethought and re-optimized to make it much easier to test your DAGs locally - the major changes are:&lt;/p&gt;
+&lt;p&gt;a. Task logs are visible right there in the console, instead of hidden away inside the task log files
+b. It is about an order of magnitude quicker to run the tasks than before (i.e. it gets to running the task code so much quicker)
+c. Everything runs in one process, so you can put a breakpoint in your IDE, and configure it to run &lt;code&gt;airflow dags test &amp;lt;mydag&amp;gt;&lt;/code&gt; then debug code!&lt;/p&gt;
+&lt;h2 id=&#34;auto-tailing-task-logs-in-the-grid-view&#34;&gt;Auto tailing task logs in the Grid view&lt;/h2&gt;
+&lt;p&gt;Hopefully the headline says enough. It&amp;rsquo;s lovely, go check it out.&lt;/p&gt;
+&lt;h2 id=&#34;more-improvments-to-dynamic-task-mapping&#34;&gt;More improvments to Dynamic-Task mapping&lt;/h2&gt;
+&lt;p&gt;In a similar vein to the improvements to the Dataset (UI), we have continued to iterate on and improve the feature we first added in Airflow 2.3, Dynamic Task Mapping, and 2.5 includes &lt;a href=&#34;https://github.com/apache/airflow/pulls?q=is%3Apr+author%3Auranusjr+is%3Aclosed+milestone%3A%22Airflow+2.5.0%22&#34;&gt;dozens of improvements&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;thanks-to-the-contributors&#34;&gt;Thanks to the contributors&lt;/h2&gt;
+&lt;p&gt;Andrey Anshin, Ash Berlin-Taylor, blag, Bolke de Bruin, Brent Bovenzi, Chenglong Yan, Daniel Standish, Dov Benyomin Sohacheski, Elad Kalif, Ephraim Anierobi, Jarek Potiuk, Jed Cunningham, Jorrick Sleijster, Michael Petro, Niko, Pierre Jeambrun, Tzu-ping Chung and many more, over 75 of you. Thank you!&lt;/p&gt;
+&lt;p&gt;And a special thank you to Ephraim who tirelessly worked behind the scenes as release manager!&lt;/p&gt;
+&lt;p&gt;A much shorter change log than 2.4, but I think you&amp;rsquo;ll agree, some great changes.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: Apache Airflow 2.4.0: That Data Aware Release</title>
       <link>/blog/airflow-2.4.0/</link>
       <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
